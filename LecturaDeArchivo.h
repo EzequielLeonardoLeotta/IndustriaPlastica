@@ -11,4 +11,6 @@
 //http://www.cplusplus.com/doc/tutorial/files/
 //http://www.cplusplus.com/reference/string/string/getline/
 
+//devolver ademas de la linea que lee la posicion de la lista
+
 #endif

@@ -23,7 +23,7 @@ enum ResultadoComparacion {
 };
 /* Tipo de Informacion que esta contenida en los Nodos de la
    Lista, identificada como Dato. */
-typedef struct Dato {}; //hay que hacer una lista de figuras y n listas por color
+typedef struct Dato {}; //hay que hacer una lista de figuras y n listas de figuras por color
 
 /* Tipo de Estructura de los Nodos de la Lista. */
 struct NodoLista {

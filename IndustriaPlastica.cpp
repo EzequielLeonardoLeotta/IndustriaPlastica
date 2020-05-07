@@ -1,12 +1,12 @@
 #include "LecturaDeArchivo.h"
 #include "Areas.h"
-#include "Listas.h" //hacer una lista de figuras y n listas por colores
+#include "Listas.h" //hacer una lista de figuras y n listas de figuras por color
 #include <iostream>
 #include<string>
 using namespace std;
 
-void pauseConsole() { system("pause"); }
-void cleanConsoleMain() { system("cls"); }
+void pausarConsola() { system("pause"); }
+void limpiarConsola() { system("cls"); }
 
 int main()
 {
@@ -16,7 +16,7 @@ int main()
 	//menu principal
 	do
 	{
-		cleanConsoleMain();
+		limpiarConsola();
 		cin.clear();
 
 		cout <<
@@ -26,7 +26,7 @@ int main()
 		//puede que en vez del nombre necesita la ruta del archivo, en ese caso cambiar los nombres de las variables
 		cin >> nombreArchivo;
 
-		cleanConsoleMain();
+		limpiarConsola();
 
 		cout <<
 			"*************   Industria Plastica   ************" << "\n\n" <<
