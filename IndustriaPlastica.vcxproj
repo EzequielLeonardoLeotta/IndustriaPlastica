@@ -154,6 +154,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Areas.h" />
+    <ClInclude Include="Figura.h" />
     <ClInclude Include="IndustriaPlastica.h" />
     <ClInclude Include="LecturaDeArchivo.h" />
     <ClInclude Include="Listas.h" />
