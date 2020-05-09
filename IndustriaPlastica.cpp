@@ -10,8 +10,11 @@ void limpiarConsola() { system("cls"); }
 
 int main()
 {
+	
+
+
 	int opcion = 0;
-	string nombreArchivo = "";
+	string nombreArchivo="";
 
 	//menu principal
 	do
@@ -25,9 +28,9 @@ int main()
 			<< endl;
 		//puede que en vez del nombre necesita la ruta del archivo, en ese caso cambiar los nombres de las variables
 		cin >> nombreArchivo;
-
-		limpiarConsola();
-
+		//leerArchivo((const char*)&nombreArchivo);
+		//limpiarConsola();
+		leerArchivo("C:\\Users\\sofia\\Source\\Repos\\EzequielLeonardoLeotta\\IndustriaPlastica\\LoteFiguras.txt");
 		cout <<
 			"*************   Industria Plastica   ************" << "\n\n" <<
 			"1:Mostrar Figuras" << "\n" <<
@@ -41,7 +44,7 @@ int main()
 			<< endl;
 
 		cin >> opcion;
-
+		
 		switch (opcion)
 		{
 		/*case 1:

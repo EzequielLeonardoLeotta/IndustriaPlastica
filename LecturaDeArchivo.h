@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include"string.h"
 #include<string>
+using namespace std;
+
 
 #ifndef __LECTURADEARCHIVO_H__
 #define __LECTURADEARCHIVO_H__
@@ -12,5 +15,6 @@
 //http://www.cplusplus.com/reference/string/string/getline/
 
 //devolver ademas de la linea que lee la posicion de la lista
+void leerArchivo(const char* filename);
 
 #endif
