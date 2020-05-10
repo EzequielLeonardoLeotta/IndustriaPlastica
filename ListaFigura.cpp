@@ -1,21 +1,26 @@
 #include "ListaFigura.h"
 #include "Figura.h"
 #include <string.h>
+#include <stdlib.h>
+#include <stdio.h>
 
-/*
+
 CompararAreaFigura resultadoComparacion(Figura figu1, Figura figu2)
 {
+	CompararAreaFigura aux;
+
 	if (getArea(figu1) > getArea(figu2)) {
-		return    MAYORAREA;
+		aux=MAYORAREA;
 	}
 	else if (getArea(figu1) < getArea(figu2)) {
-		return MENORAREA;
+		aux=MENORAREA;
 	}
 	else {
-		return IGUALAREA;
+		aux=IGUALAREA;
 	}
+	return aux;
 }
-*/
+
 
 void crearListaFigura(ListaFigura& lista)
 {
@@ -136,7 +141,7 @@ int Longitud(ListaFigura& lista)
 }
 PtrNodoListaFigura AdicionarFinal(ListaFigura& lista, Figura figu)
 {
-	return adicionarDespues(lista, figu, anterior(lista, NULL));
+	return adicionarDespues(lista, figu, ultimo(lista));
 
 }
 

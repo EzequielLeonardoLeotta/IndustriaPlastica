@@ -5,13 +5,16 @@
 
 #ifndef LISTAFIGURA_H_
 #define LISTAFIGURA_H_
+
 /* tipo enumerado para realizar comparaciones */
+
 enum CompararAreaFigura {
     MAYORAREA,
     IGUALAREA,
-    MENORAREA,
+    MENORAREA
 
 };
+
 /* Tipo de Estructura de los Nodos de la Lista. */
 struct NodoListaFigura {
     Figura figu; // dato almacenado
@@ -56,4 +59,4 @@ void obtenerDato(ListaFigura& lista, Figura& Figu, PtrNodoListaFigura ptrNodo);
 
 PtrNodoListaFigura localizarDato(ListaFigura& lista, Figura figu);
 
-#endif#
+#endif
