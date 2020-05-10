@@ -8,7 +8,7 @@ using namespace std;
 /* Definiciones de Tipos de Datos */
 /*--------------------------------*/
 
-enum TipoFigura { Circulo, Cilindro, Cubo, Triangulo, Rectangulo };
+enum class TipoFigura { Circulo, Cilindro, Cubo, Triangulo, Rectangulo };
 
 typedef struct Figura {
     TipoFigura tipoFigura;
@@ -36,7 +36,7 @@ void constructor(Figura& figura, string color, float area, float parametro1, flo
     ATRIBUTOS: Figura (instancia sobre la cual se aplica la primitiva).
     RETORNO: No aplica.
 */
-void destructor(Figura& figura);
+//void destructor(Figura& figura);
 
 /*
     PRE: La instancia del TDA (Figura) debe haberse creado (constructor) pero no debe estar destruida (destructor).
@@ -60,7 +60,7 @@ void setTipoFigura(Figura& figura, TipoFigura tipoFigura);
     ATRIBUTOS: Figura (instancia sobre la cual se aplica la primitiva).
     RETORNO: Devuelve el color de la figura.
 */
-string *getColor(Figura& figura);
+string getColor(Figura& figura);
 
 /*
     PRE: La instancia del TDA (Figura) debe haberse creado (constructor) pero no debe estar destruida (destructor).
