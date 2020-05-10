@@ -1,2 +1,8 @@
-﻿ListaFigura.obj : error LNK2019: unresolved external symbol "float __cdecl getArea(struct Figura &)" (?getArea@@YAMAEAUFigura@@@Z) referenced in function "enum CompararAreaFigura __cdecl resultadoComparacion(struct Figura,struct Figura)" (?resultadoComparacion@@YA?AW4CompararAreaFigura@@UFigura@@0@Z)
+﻿  IndustriaPlastica.cpp
+C:\Users\user\Documents\GitHub\IndustriaPlastica\Listas.h(26,23): warning C4091: 'typedef ': ignored on left of 'Dato' when no variable is declared
+C:\Users\user\Documents\GitHub\IndustriaPlastica\IndustriaPlastica.cpp(74,3): warning C4060: switch statement contains no 'case' or 'default' labels
+  Listas.cpp
+C:\Users\user\Documents\GitHub\IndustriaPlastica\Listas.h(26,23): warning C4091: 'typedef ': ignored on left of 'Dato' when no variable is declared
+  Generating Code...
+ListaFigura.obj : error LNK2019: unresolved external symbol "float __cdecl getArea(struct Figura &)" (?getArea@@YAMAEAUFigura@@@Z) referenced in function "enum CompararAreaFigura __cdecl resultadoComparacion(struct Figura,struct Figura)" (?resultadoComparacion@@YA?AW4CompararAreaFigura@@UFigura@@0@Z)
 C:\Users\user\Documents\GitHub\IndustriaPlastica\x64\Debug\IndustriaPlastica.exe : fatal error LNK1120: 1 unresolved externals

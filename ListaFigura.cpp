@@ -139,9 +139,3 @@ int Longitud(ListaFigura& lista)
 
 
 }
-PtrNodoListaFigura AdicionarFinal(ListaFigura& lista, Figura figu)
-{
-	return adicionarDespues(lista, figu, ultimo(lista));
-
-}
-
