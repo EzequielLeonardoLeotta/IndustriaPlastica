@@ -1,7 +1,4 @@
-﻿  IndustriaPlastica.cpp
-C:\Users\eleotta\Desktop\C++\IndustriaPlastica\Listas.h(26,23): warning C4091: 'typedef ': se ha omitido a la izquierda de 'Dato' cuando no hay ninguna variable declarada
-C:\Users\eleotta\Desktop\C++\IndustriaPlastica\IndustriaPlastica.cpp(71,3): warning C4060: la instrucción switch no contiene etiquetas 'case' ni 'default'
-  Listas.cpp
-C:\Users\eleotta\Desktop\C++\IndustriaPlastica\Listas.h(26,23): warning C4091: 'typedef ': se ha omitido a la izquierda de 'Dato' cuando no hay ninguna variable declarada
-  Generando código...
-  IndustriaPlastica.vcxproj -> C:\Users\eleotta\Desktop\C++\IndustriaPlastica\x64\Debug\IndustriaPlastica.exe
+﻿  ListaFigura.cpp
+F:\mio\ayed 2020\IndustriaPlastica-develop\Figura.h(19,2): warning C4091: 'typedef ': ignored on left of 'Figura' when no variable is declared
+F:\mio\ayed 2020\IndustriaPlastica-develop\ListaFigura.cpp(114,42): warning C4551: function call missing argument list
+  IndustriaPlastica.vcxproj -> C:\Users\user\Documents\GitHub\IndustriaPlastica\x64\Debug\IndustriaPlastica.exe
