@@ -1,4 +1,4 @@
 ﻿  ListaFigura.cpp
-F:\mio\ayed 2020\IndustriaPlastica-develop\Figura.h(19,2): warning C4091: 'typedef ': ignored on left of 'Figura' when no variable is declared
-F:\mio\ayed 2020\IndustriaPlastica-develop\ListaFigura.cpp(114,42): warning C4551: function call missing argument list
+C:\Users\user\Documents\GitHub\IndustriaPlastica\Figura.h(19,2): warning C4091: 'typedef ': ignored on left of 'Figura' when no variable is declared
+C:\Users\user\Documents\GitHub\IndustriaPlastica\ListaFigura.cpp(114,42): warning C4551: function call missing argument list
   IndustriaPlastica.vcxproj -> C:\Users\user\Documents\GitHub\IndustriaPlastica\x64\Debug\IndustriaPlastica.exe

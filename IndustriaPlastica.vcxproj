@@ -148,17 +148,17 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Areas.cpp" />
-    <ClCompile Include="F:\mio\ayed 2020\IndustriaPlastica-develop\ListaFigura.cpp" />
     <ClCompile Include="IndustriaPlastica.cpp" />
     <ClCompile Include="LecturaDeArchivo.cpp" />
+    <ClCompile Include="ListaFigura.cpp" />
     <ClCompile Include="Listas.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Areas.h" />
-    <ClInclude Include="F:\mio\ayed 2020\IndustriaPlastica-develop\ListaFigura.h" />
     <ClInclude Include="Figura.h" />
     <ClInclude Include="IndustriaPlastica.h" />
     <ClInclude Include="LecturaDeArchivo.h" />
+    <ClInclude Include="ListaFigura.h" />
     <ClInclude Include="Listas.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

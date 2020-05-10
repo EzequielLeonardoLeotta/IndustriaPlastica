@@ -27,7 +27,7 @@
     <ClCompile Include="Listas.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="F:\mio\ayed 2020\IndustriaPlastica-develop\ListaFigura.cpp">
+    <ClCompile Include="ListaFigura.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>
@@ -47,7 +47,7 @@
     <ClInclude Include="Figura.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="F:\mio\ayed 2020\IndustriaPlastica-develop\ListaFigura.h">
+    <ClInclude Include="ListaFigura.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>
