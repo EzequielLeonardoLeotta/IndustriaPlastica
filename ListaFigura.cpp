@@ -119,6 +119,35 @@ void obtenerDato(ListaFigura& lista, Figura& figu, PtrNodoListaFigura ptrNodo)
 	if (ptrNodo != finLista() && !listaVacia)
 		figu = ptrNodo->figu;
 }
+void eliminarNodoListaFigura(ListaFigura& lista, PtrNodoListaFigura ptrNodo)
+{
+	PtrNodoListaFigura ptrPrevio;
+
+	/* verifica que la lista no esté vacia y que nodo no sea finListaFigura*/
+	if ((!listaVacia(lista)) && (ptrNodo != finLista())) {
+
+		if (ptrNodo == primero(lista))
+			lista.primero = siguiente(lista, primero(lista));
+
+		else {
+			ptrPrevio = anterior(lista, ptrNodo);
+			ptrPrevio->sgte = ptrNodo->sgte;
+		}
+		// Si el dato es un TDA, acá habría que llamar al destructor.
+
+		delete ptrNodo;
+	}
+}
+
+void eliminarLista(ListaFigura& lista){
+{
+	/* retira uno a uno los nodos de la lista */
+	while (!listaVacia(lista))
+		eliminarNodoListaFigura(lista, primero(lista));
+}
+
+}
+
 /* VER ACA COMO COMPARAMOS 2 FIGURAS, COMO SABEMOS QUE SON IGUALES LA MISMA FIGURA
 O DISTINTAS?
 PtrNodoListaFigura localizarDato(ListaFigura& lista, Figura figu)

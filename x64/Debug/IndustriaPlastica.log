@@ -1,14 +1,14 @@
 ﻿  Areas.cpp
   Figura.cpp
-C:\Users\eleotta\Desktop\C++\IndustriaPlastica\Figura.h(19,2): warning C4091: 'typedef ': se ha omitido a la izquierda de 'Figura' cuando no hay ninguna variable declarada
+C:\Users\user\Documents\GitHub\IndustriaPlastica\Figura.h(19,2): warning C4091: 'typedef ': ignored on left of 'Figura' when no variable is declared
   IndustriaPlastica.cpp
-C:\Users\eleotta\Desktop\C++\IndustriaPlastica\Listas.h(26,23): warning C4091: 'typedef ': se ha omitido a la izquierda de 'Dato' cuando no hay ninguna variable declarada
-C:\Users\eleotta\Desktop\C++\IndustriaPlastica\IndustriaPlastica.cpp(74,3): warning C4060: la instrucción switch no contiene etiquetas 'case' ni 'default'
+C:\Users\user\Documents\GitHub\IndustriaPlastica\Listas.h(26,23): warning C4091: 'typedef ': ignored on left of 'Dato' when no variable is declared
+C:\Users\user\Documents\GitHub\IndustriaPlastica\IndustriaPlastica.cpp(74,3): warning C4060: switch statement contains no 'case' or 'default' labels
   LecturaDeArchivo.cpp
   ListaFigura.cpp
-C:\Users\eleotta\Desktop\C++\IndustriaPlastica\Figura.h(19,2): warning C4091: 'typedef ': se ha omitido a la izquierda de 'Figura' cuando no hay ninguna variable declarada
-C:\Users\eleotta\Desktop\C++\IndustriaPlastica\ListaFigura.cpp(119,42): warning C4551: la llamada a la función no tiene lista de argumentos
+C:\Users\user\Documents\GitHub\IndustriaPlastica\Figura.h(19,2): warning C4091: 'typedef ': ignored on left of 'Figura' when no variable is declared
+C:\Users\user\Documents\GitHub\IndustriaPlastica\ListaFigura.cpp(119,42): warning C4551: function call missing argument list
   Listas.cpp
-C:\Users\eleotta\Desktop\C++\IndustriaPlastica\Listas.h(26,23): warning C4091: 'typedef ': se ha omitido a la izquierda de 'Dato' cuando no hay ninguna variable declarada
-  Generando código...
-  IndustriaPlastica.vcxproj -> C:\Users\eleotta\Desktop\C++\IndustriaPlastica\x64\Debug\IndustriaPlastica.exe
+C:\Users\user\Documents\GitHub\IndustriaPlastica\Listas.h(26,23): warning C4091: 'typedef ': ignored on left of 'Dato' when no variable is declared
+  Generating Code...
+  IndustriaPlastica.vcxproj -> C:\Users\user\Documents\GitHub\IndustriaPlastica\x64\Debug\IndustriaPlastica.exe

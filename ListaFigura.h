@@ -59,4 +59,8 @@ void obtenerDato(ListaFigura& lista, Figura& Figu, PtrNodoListaFigura ptrNodo);
 
 PtrNodoListaFigura localizarDato(ListaFigura& lista, Figura figu);
 
+void eliminarNodoListaFigura(ListaFigura& lista, PtrNodoListaFigura ptrNodo);
+
+void eliminarLista(ListaFigura& lista);
+
 #endif
