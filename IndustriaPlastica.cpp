@@ -1,11 +1,10 @@
 #include "LecturaDeArchivo.h"
 #include "Areas.h"
 #include "Listas.h" //hacer una lista de figuras y n listas de figuras por color
-# include "Figura.h"
+#include "Figura.h"
 #include "ListaFigura.h"
 #include <iostream>
 #include<string>
-
 
 using namespace std;
 
@@ -44,12 +43,12 @@ int main()
 		cout <<
 			"*************   Industria Plastica   ************" << "\n\n" <<
 			"Ingrese nombre de archivo: "
-			<< endl;
-		//puede que en vez del nombre necesita la ruta del archivo, en ese caso cambiar los nombres de las variables
+		<< endl;
+		
 		cin >> nombreArchivo;
-		//leerArchivo((const char*)&nombreArchivo);
-		//limpiarConsola();
-		leerArchivo("C:\\Users\\sofia\\Source\\Repos\\EzequielLeonardoLeotta\\IndustriaPlastica\\LoteFiguras.txt");
+		limpiarConsola();
+		queue<string> contenidoArchivo = leerArchivo(nombreArchivo);
+		
 		cout <<
 			"*************   Industria Plastica   ************" << "\n\n" <<
 			"1:Mostrar Figuras" << "\n" <<
@@ -60,7 +59,7 @@ int main()
 			"6:Orden de Figuras Segun sus Areas" << "\n" <<
 			"0:Salir" << "\n\n" <<
 			"Ingrese una opcion: "
-			<< endl;
+		<< endl;
 
 		cin >> opcion;
 		
@@ -95,5 +94,3 @@ int main()
 */
 	return 0;
 }
-
-
