@@ -3,6 +3,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
+#include <iostream>
 
 
 CompararAreaFigura resultadoComparacion(Figura figu1, Figura figu2)
@@ -114,10 +115,10 @@ PtrNodoListaFigura ultimo(ListaFigura& lista)
 
 }
 
-void obtenerDato(ListaFigura& lista, Figura& figu, PtrNodoListaFigura ptrNodo)
+void obtenerDato(ListaFigura& lista, Figura& figura, PtrNodoListaFigura ptrNodo)
 {
-	if (ptrNodo != finLista() && !listaVacia)
-		figu = ptrNodo->figu;
+   if ((!listaVacia(lista)) && (ptrNodo != finLista()))
+		figura = ptrNodo->figu;
 }
 void eliminarNodoListaFigura(ListaFigura& lista, PtrNodoListaFigura ptrNodo)
 {
@@ -146,6 +147,26 @@ void eliminarLista(ListaFigura& lista){
 		eliminarNodoListaFigura(lista, primero(lista));
 }
 
+}
+
+void recorrerLista(ListaFigura& lista)
+{
+	PtrNodoListaFigura cursor;
+	cursor = primero(lista);
+	Figura aux;
+	constructor(aux, "", 0, 0, 0);
+
+	while (cursor != finLista()) {
+		obtenerDato(lista, aux, cursor);
+		cout << getColor(aux) << endl;
+		cout << getArea(aux) << endl;
+		cout << getParametro1(aux) << endl;
+		cout << getParametro2(aux) << endl;
+		cout << getParametro2(aux) << endl;
+		cout << (int)getTipoFigura(aux) << endl;
+
+		cursor = siguiente(lista, cursor);
+	}
 }
 
 /* VER ACA COMO COMPARAMOS 2 FIGURAS, COMO SABEMOS QUE SON IGUALES LA MISMA FIGURA

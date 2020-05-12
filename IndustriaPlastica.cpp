@@ -1,18 +1,37 @@
 #include "LecturaDeArchivo.h"
 #include "Areas.h"
 #include "Listas.h" //hacer una lista de figuras y n listas de figuras por color
+# include "Figura.h"
+#include "ListaFigura.h"
 #include <iostream>
 #include<string>
+
+
 using namespace std;
+
 
 void pausarConsola() { system("pause"); }
 void limpiarConsola() { system("cls"); }
 
 int main()
-{
+{   
+	Figura fig1;
+	constructor(fig1, "rojo", 3.5, 1, 2);
+	setTipoFigura(fig1, TipoFigura(1));
+
+	Figura fig2;
+	constructor(fig2, "negro", 5.4, 3.2, 1.1);
+	setTipoFigura(fig2, TipoFigura(2));
+
+	ListaFigura lst;
+	crearListaFigura(lst);
+	adicionarPrimero(lst, fig1);
+	adicionarDespues(lst, fig2, primero(lst));
+
+	recorrerLista(lst);
 	
 
-
+	/*
 	int opcion = 0;
 	string nombreArchivo="";
 
@@ -70,9 +89,11 @@ int main()
 		default:
 			cleanConsoleMain();
 			cout << "Opcion no valida.\n";
-			break;*/
+			break;
 		}
 	} while (opcion != 0);
-
+*/
 	return 0;
 }
+
+

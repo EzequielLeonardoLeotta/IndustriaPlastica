@@ -63,4 +63,6 @@ void eliminarNodoListaFigura(ListaFigura& lista, PtrNodoListaFigura ptrNodo);
 
 void eliminarLista(ListaFigura& lista);
 
+void recorrerLista(ListaFigura& lista);
+
 #endif

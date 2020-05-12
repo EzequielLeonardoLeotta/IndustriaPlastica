@@ -1,14 +1,8 @@
-﻿  Areas.cpp
-  Figura.cpp
-C:\Users\user\Documents\GitHub\IndustriaPlastica\Figura.h(19,2): warning C4091: 'typedef ': ignored on left of 'Figura' when no variable is declared
-  IndustriaPlastica.cpp
+﻿  IndustriaPlastica.cpp
 C:\Users\user\Documents\GitHub\IndustriaPlastica\Listas.h(26,23): warning C4091: 'typedef ': ignored on left of 'Dato' when no variable is declared
-C:\Users\user\Documents\GitHub\IndustriaPlastica\IndustriaPlastica.cpp(74,3): warning C4060: switch statement contains no 'case' or 'default' labels
-  LecturaDeArchivo.cpp
+C:\Users\user\Documents\GitHub\IndustriaPlastica\Figura.h(19,2): warning C4091: 'typedef ': ignored on left of 'Figura' when no variable is declared
+C:\Users\user\Documents\GitHub\IndustriaPlastica\IndustriaPlastica.cpp(26,42): warning C4305: 'argument': truncation from 'double' to 'float'
   ListaFigura.cpp
 C:\Users\user\Documents\GitHub\IndustriaPlastica\Figura.h(19,2): warning C4091: 'typedef ': ignored on left of 'Figura' when no variable is declared
-C:\Users\user\Documents\GitHub\IndustriaPlastica\ListaFigura.cpp(119,42): warning C4551: function call missing argument list
-  Listas.cpp
-C:\Users\user\Documents\GitHub\IndustriaPlastica\Listas.h(26,23): warning C4091: 'typedef ': ignored on left of 'Dato' when no variable is declared
   Generating Code...
   IndustriaPlastica.vcxproj -> C:\Users\user\Documents\GitHub\IndustriaPlastica\x64\Debug\IndustriaPlastica.exe
