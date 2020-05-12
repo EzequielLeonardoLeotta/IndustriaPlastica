@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include"string.h"
 #include<string>
+#include<queue>
 using namespace std;
 
 
@@ -15,6 +16,7 @@ using namespace std;
 //http://www.cplusplus.com/reference/string/string/getline/
 
 //devolver ademas de la linea que lee la posicion de la lista
-void leerArchivo(const char* filename);
+//void leerArchivo(const char* filename);
+queue<string> leerArchivo(string nombreArchivo);
 
 #endif
