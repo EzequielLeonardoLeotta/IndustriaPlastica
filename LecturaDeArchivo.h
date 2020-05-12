@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include"string.h"
 #include<string>
 #include<queue>
 using namespace std;
@@ -9,14 +8,7 @@ using namespace std;
 #ifndef __LECTURADEARCHIVO_H__
 #define __LECTURADEARCHIVO_H__
 
-//lee el archivo y va devolviendo cada linea que lee
-//void leerArchivo(string nombreArchivo);
-//Con estas dos librerias se resuelve
-//http://www.cplusplus.com/doc/tutorial/files/
-//http://www.cplusplus.com/reference/string/string/getline/
-
-//devolver ademas de la linea que lee la posicion de la lista
-//void leerArchivo(const char* filename);
+//Lee el archivo y retorna una cola que contiene una linea por cada posicion
 queue<string> leerArchivo(string nombreArchivo);
 
 #endif

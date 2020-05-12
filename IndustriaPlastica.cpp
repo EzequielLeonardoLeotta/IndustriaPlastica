@@ -3,6 +3,7 @@
 #include "Listas.h" //hacer una lista de figuras y n listas de figuras por color
 #include <iostream>
 #include<string>
+#include "Figura.h"
 using namespace std;
 
 void pausarConsola() { system("pause"); }
@@ -22,7 +23,7 @@ int main()
 		cout <<
 			"*************   Industria Plastica   ************" << "\n\n" <<
 			"Ingrese nombre de archivo: "
-			<< endl;
+		<< endl;
 		
 		cin >> nombreArchivo;
 		limpiarConsola();
@@ -38,7 +39,7 @@ int main()
 			"6:Orden de Figuras Segun sus Areas" << "\n" <<
 			"0:Salir" << "\n\n" <<
 			"Ingrese una opcion: "
-			<< endl;
+		<< endl;
 
 		cin >> opcion;
 		
