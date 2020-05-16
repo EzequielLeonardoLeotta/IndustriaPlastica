@@ -83,7 +83,7 @@ PtrNodoListaFigura adicionarDespues(ListaFigura& lista, Figura figu, PtrNodoList
 
 }
 
-PtrNodoListaFigura AdicionarFinal(ListaFigura lista, Figura figu)
+PtrNodoListaFigura adicionarFinal(ListaFigura lista, Figura figu)
 {
 	return adicionarDespues(lista, figu, ultimo(lista));
 }
@@ -153,17 +153,40 @@ void recorrerLista(ListaFigura& lista)
 {
 	PtrNodoListaFigura cursor;
 	cursor = primero(lista);
-	Figura aux;
-	constructor(aux, "", 0, 0, 0);
+	Figura auxFigura;
+	string tipoFigura = "";
+	int tipo = 0;
 
 	while (cursor != finLista()) {
-		obtenerDato(lista, aux, cursor);
-		cout << getColor(aux) << endl;
-		cout << getArea(aux) << endl;
-		cout << getParametro1(aux) << endl;
-		cout << getParametro2(aux) << endl;
-		cout << getParametro2(aux) << endl;
-		cout << (int)getTipoFigura(aux) << endl;
+		obtenerDato(lista, auxFigura, cursor);
+
+		tipo = getArea(auxFigura);
+
+		switch (tipo)
+		{
+			case 0: 
+				tipoFigura = "circulo";
+				break;
+			case 1:
+				tipoFigura = "cilindro";
+				break;
+			case 2:
+				tipoFigura = "cubo";
+				break;
+			case 3:
+				tipoFigura = "triangulo";
+				break;
+			case 4:
+				tipoFigura = "rectangulo";
+				break;
+		}
+
+		cout << tipoFigura << endl;
+		cout << getColor(auxFigura) << endl;
+		//cout << getArea(auxFigura) << endl;
+		cout << getParametro1(auxFigura) << endl;
+		cout << getParametro2(auxFigura) << endl;
+		cout << "\n" << endl;
 
 		cursor = siguiente(lista, cursor);
 	}

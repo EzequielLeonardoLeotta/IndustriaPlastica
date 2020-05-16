@@ -47,7 +47,7 @@ PtrNodoListaFigura crearNodo(Figura figura);
 
 PtrNodoListaFigura adicionarDespues(ListaFigura& lista, Figura figu, PtrNodoListaFigura ptr);
 
-PtrNodoListaFigura AdicionarFinal(ListaFigura lista, Figura figu);
+PtrNodoListaFigura adicionarFinal(ListaFigura lista, Figura figu);
 
 PtrNodoListaFigura adicionarPrimero(ListaFigura& lista, Figura figu);
 

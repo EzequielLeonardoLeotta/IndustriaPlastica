@@ -28,7 +28,7 @@ typedef struct Figura {
     ATRIBUTOS: Figura (instancia sobre la cual se aplica la primitiva), color, area, parametro1, parametro2.
     RETORNO: No aplica.
 */
-void constructor(Figura& figura, string color, float area, float parametro1, float parametro2);
+void constructor(Figura& figura, TipoFigura tipoFigura, string color, float area, float parametro1, float parametro2);
 
 /*
     PRE: La instancia del TDA (Figura) debe haberse creado (constructor) pero no debe estar destruida (destructor).

@@ -1,15 +1,5 @@
-﻿  Areas.cpp
-  Figura.cpp
-C:\Users\user\Documents\GitHub\IndustriaPlastica\Figura.h(19,2): warning C4091: 'typedef ': ignored on left of 'Figura' when no variable is declared
-  IndustriaPlastica.cpp
-C:\Users\user\Documents\GitHub\IndustriaPlastica\Listas.h(26,23): warning C4091: 'typedef ': ignored on left of 'Dato' when no variable is declared
-C:\Users\user\Documents\GitHub\IndustriaPlastica\Figura.h(19,2): warning C4091: 'typedef ': ignored on left of 'Figura' when no variable is declared
-C:\Users\user\Documents\GitHub\IndustriaPlastica\IndustriaPlastica.cpp(22,42): warning C4305: 'argument': truncation from 'double' to 'float'
-  LecturaDeArchivo.cpp
-  ListaFigura.cpp
-C:\Users\user\Documents\GitHub\IndustriaPlastica\Figura.h(19,2): warning C4091: 'typedef ': ignored on left of 'Figura' when no variable is declared
-  Listas.cpp
-C:\Users\user\Documents\GitHub\IndustriaPlastica\Listas.h(26,23): warning C4091: 'typedef ': ignored on left of 'Dato' when no variable is declared
-  Generating Code...
-  LINK : C:\Users\user\Documents\GitHub\IndustriaPlastica\x64\Debug\IndustriaPlastica.exe not found or not built by the last incremental link; performing full link
-  IndustriaPlastica.vcxproj -> C:\Users\user\Documents\GitHub\IndustriaPlastica\x64\Debug\IndustriaPlastica.exe
+﻿  ListaFigura.cpp
+C:\Users\eleotta\Desktop\C++\IndustriaPlastica\Figura.h(19,2): warning C4091: 'typedef ': se ha omitido a la izquierda de 'Figura' cuando no hay ninguna variable declarada
+C:\Users\eleotta\Desktop\C++\IndustriaPlastica\ListaFigura.cpp(163,17): warning C4244: '=': conversión de 'float' a 'int'; posible pérdida de datos
+  LINK : no se encontró C:\Users\eleotta\Desktop\C++\IndustriaPlastica\x64\Debug\IndustriaPlastica.exe o no lo generó el último vínculo incremental; ejecutando vínculo completo
+  IndustriaPlastica.vcxproj -> C:\Users\eleotta\Desktop\C++\IndustriaPlastica\x64\Debug\IndustriaPlastica.exe

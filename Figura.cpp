@@ -2,8 +2,9 @@
 #include<string>
 using namespace std;
 
-void constructor(Figura& figura, string color, float area, float parametro1, float parametro2)
+void constructor(Figura& figura, TipoFigura tipoFigura, string color, float area, float parametro1, float parametro2)
 {
+	figura.tipoFigura = tipoFigura;
 	figura.color = color;
 	figura.area = area;
 	figura.parametro1 = parametro1;
