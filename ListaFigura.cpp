@@ -160,7 +160,7 @@ void recorrerLista(ListaFigura& lista)
 	while (cursor != finLista()) {
 		obtenerDato(lista, auxFigura, cursor);
 
-		tipo = getArea(auxFigura);
+		tipo = (int)auxFigura.tipoFigura;
 
 		switch (tipo)
 		{
@@ -183,9 +183,10 @@ void recorrerLista(ListaFigura& lista)
 
 		cout << tipoFigura << endl;
 		cout << getColor(auxFigura) << endl;
-		//cout << getArea(auxFigura) << endl;
 		cout << getParametro1(auxFigura) << endl;
 		cout << getParametro2(auxFigura) << endl;
+		cout << "Area:" << endl;
+		cout << getArea(auxFigura) << endl;
 		cout << "\n" << endl;
 
 		cursor = siguiente(lista, cursor);

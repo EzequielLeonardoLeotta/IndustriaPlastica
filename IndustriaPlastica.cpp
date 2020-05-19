@@ -40,8 +40,9 @@ void insertarFiguras(queue<string> contenidoArchivo)
 
 		insertarDatosEnVariables();
 
-		//construyo la figura y la inserto en la lista
+		//construyo la figura, calculo su area y la inserto en la lista
 		constructor(figura, tipoFigura, color, area, parametro1, parametro2);
+		setArea(figura, calcularArea(figura));
 		listaVacia(listaFigura) ? adicionarPrimero(listaFigura, figura) : adicionarFinal(listaFigura, figura);
 
 		//vacio el array y pongo el iterador en 0
@@ -50,11 +51,10 @@ void insertarFiguras(queue<string> contenidoArchivo)
 		valores[1] = "";
 		valores[2] = "";
 		valores[3] = "";
-
 		contenidoArchivo.pop(); // elimino el valor
 	}
 	//Esto se usa solo para probar
-	recorrerLista(listaFigura); 
+	//recorrerLista(listaFigura); 
 }
 
 void insertarDatosEnArray(queue<string> contenidoArchivo)
@@ -108,10 +108,22 @@ void insertarDatosEnVariables()
 	color = valores[1];
 	parametro1 = stof(valores[2]);
 	parametro2 = !valores[3].empty() ? stof(valores[3]) : 0;
-	area = calcularArea(figura);
 }
 
 float calcularArea(Figura figura)
 {
-	return 1;
+	float area = 0;
+
+	if (figura.tipoFigura == TipoFigura::Circulo)
+		area = areaCirculo(figura.parametro1);
+	if (figura.tipoFigura == TipoFigura::Cilindro)
+		area = areaCilindro(figura.parametro1, figura.parametro2);
+	if (figura.tipoFigura == TipoFigura::Cubo)
+		area = areaCubo(figura.parametro1);
+	if (figura.tipoFigura == TipoFigura::Triangulo)
+		area = areaTriangulo(figura.parametro1, figura.parametro2);
+	if (figura.tipoFigura == TipoFigura::Rectangulo)
+		area = areaRectangulo(figura.parametro1, figura.parametro2);
+
+	return area;
 }
