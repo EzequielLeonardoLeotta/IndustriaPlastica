@@ -1,2 +1,0 @@
-C:\Users\eleotta\Desktop\C++\IndustriaPlastica\x64\Debug\IndustriaPlastica.exe
-C:\Users\eleotta\Desktop\C++\IndustriaPlastica\x64\Debug\IndustriaPlastica.pdb
