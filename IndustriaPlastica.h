@@ -15,7 +15,7 @@ void pausarConsola();
 void limpiarConsola();
 
 //Inserta las figuras en la lista (procedimiento general que contiene a los de abajo)
-void insertarFiguras(queue<string> contenidoArchivo);
+ListaFigura insertarFiguras(queue<string> contenidoArchivo);
 
 //Inserta los datos de la cola en un array
 void insertarDatosEnArray(queue<string> contenidoArchivo);
