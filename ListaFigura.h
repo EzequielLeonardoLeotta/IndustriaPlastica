@@ -12,12 +12,11 @@ enum CompararAreaFigura {
     MAYORAREA,
     IGUALAREA,
     MENORAREA
-
 };
 
 /* Tipo de Estructura de los Nodos de la Lista. */
 struct NodoListaFigura {
-    Figura figu; // dato almacenado
+    Figura figura; // dato almacenado
     NodoListaFigura* sgte; // puntero al siguiente
 };
 
@@ -31,7 +30,7 @@ struct ListaFigura {
     PtrNodoListaFigura primero;      // puntero al primer nodo de la lista
 };
 
-CompararAreaFigura resultadoComparacion(Figura figu1, Figura figu2);
+CompararAreaFigura resultadoComparacion(Figura figura1, Figura figura2);
 
 void crearListaFigura(ListaFigura& lista);
 
@@ -45,19 +44,19 @@ PtrNodoListaFigura siguiente(ListaFigura& lista, PtrNodoListaFigura ptrSig);
 
 PtrNodoListaFigura crearNodo(Figura figura);
 
-PtrNodoListaFigura adicionarDespues(ListaFigura& lista, Figura figu, PtrNodoListaFigura ptr);
+PtrNodoListaFigura adicionarDespues(ListaFigura& lista, Figura figura, PtrNodoListaFigura ptr);
 
-PtrNodoListaFigura adicionarFinal(ListaFigura lista, Figura figu);
+PtrNodoListaFigura adicionarFinal(ListaFigura lista, Figura figura);
 
-PtrNodoListaFigura adicionarPrimero(ListaFigura& lista, Figura figu);
+PtrNodoListaFigura adicionarPrimero(ListaFigura& lista, Figura figura);
 
 PtrNodoListaFigura anterior(ListaFigura& lista, PtrNodoListaFigura ptroNodo);
 
 PtrNodoListaFigura ultimo(ListaFigura& lista);
 
-void obtenerDato(ListaFigura& lista, Figura& Figu, PtrNodoListaFigura ptrNodo);
+void obtenerDato(ListaFigura& lista, Figura& figura, PtrNodoListaFigura ptrNodo);
 
-PtrNodoListaFigura localizarDato(ListaFigura& lista, Figura figu);
+PtrNodoListaFigura localizarDato(ListaFigura& lista, Figura figura);
 
 void eliminarNodoListaFigura(ListaFigura& lista, PtrNodoListaFigura ptrNodo);
 

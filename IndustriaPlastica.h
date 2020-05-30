@@ -3,6 +3,8 @@
 #include <queue>
 #include <string>
 #include "Figura.h"
+#include "ListaColor.h"
+#include "ListaFigura.h"
 using namespace std;
 
 #ifndef __IndustriaPlastica_H__
@@ -14,8 +16,11 @@ void pausarConsola();
 //Limpia la consola
 void limpiarConsola();
 
-//Inserta las figuras en la lista (procedimiento general que contiene a los de abajo)
-ListaFigura insertarFiguras(queue<string> contenidoArchivo);
+//Inserta las figuras en la lista (funcion general que contiene a los de abajo)
+ListaFigura insertarFigurasEnListaDeFiguras(queue<string> contenidoArchivo);
+
+//Inserta las figuras en la lista de colores (funcion general que contiene a los de abajo)
+ListaColor insertarFigurasEnListaDeColor(queue<string> contenidoArchivo);
 
 //Inserta los datos de la cola en un array
 void insertarDatosEnArray(queue<string> contenidoArchivo);
