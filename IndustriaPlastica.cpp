@@ -16,6 +16,7 @@ string valor = "";
 string valores[4];
 int iterador = 0;
 
+
 ListaFigura listaFigura;
 ListaColor listaColor;
 Color colorAux;
@@ -31,9 +32,10 @@ size_t posicionPuntoYComa = 0;
 void pausarConsola() { system("pause"); }
 void limpiarConsola() { system("cls"); }
 
-void insertarFiguras(queue<string> contenidoArchivo)
+ListaFigura insertarFiguras(queue<string> contenidoArchivo)
 {
-	crearListaFigura(listaFigura);
+	ListaFigura listaFigura;
+	crearListaFigura(listaFigura); 
 	crearListaColor(listaColor);
 
 	while(!contenidoArchivo.empty()) //mientras la cola tenga datos la recorro
@@ -59,7 +61,8 @@ void insertarFiguras(queue<string> contenidoArchivo)
 		contenidoArchivo.pop(); // elimino el valor
 	}
 	//Esto se usa solo para probar
-	//recorrerLista(listaFigura);
+	//recorrerLista(listaFigura); 
+	return listaFigura;
 }
 
 void insertarDatosEnArray(queue<string> contenidoArchivo)

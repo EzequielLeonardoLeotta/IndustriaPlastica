@@ -24,8 +24,8 @@ int main()
 
 	cin >> nombreArchivo;
 	limpiarConsola();
-	queue<string> contenidoArchivo = leerArchivo(nombreArchivo);
-	insertarFiguras(contenidoArchivo);
+	ListaFigura listaFigura=insertarFiguras(leerArchivo(nombreArchivo));
+	
 
 	//menu principal
 	do
@@ -44,33 +44,34 @@ int main()
 
 		cin >> opcion;
 
-		/*switch (opcion)
+		switch (opcion)
 		{
 		case 1:
-			cout << "Perimetro = " << perimetro(radio) << endl;
-			pauseConsole();
+			recorrerLista(listaFigura);
+			//cout << "Perimetro = " << perimetro(radio) << endl;
+			//pauseConsole();
 			break;
 		case 2:
-			cout << "Diametro = " << diametro(radio) << endl;
-			pauseConsole();
+			//cout << "Diametro = " << diametro(radio) << endl;
+			//pauseConsole();
 			break;
 		case 3:
-			cout << "Area = " << area(radio) << endl;
-			pauseConsole();
+			//cout << "Area = " << area(radio) << endl;
+			//pauseConsole();
 			break;
 		case 4:
-			cleanConsoleMain();
-			cout << "Ingrese angulo: " << endl;
-			cin >> angulo;
-			cout << "Longitud del arco = " << longitudDelArco(radio, angulo) << endl;
-			pauseConsole();
+			//cleanConsoleMain();
+			//cout << "Ingrese angulo: " << endl;
+			//cin >> angulo;
+			//cout << "Longitud del arco = " << longitudDelArco(radio, angulo) << endl;
+			//pauseConsole();
 			break;
 		case 0: exit(EXIT_FAILURE);
 		default:
-			cleanConsoleMain();
+			//cleanConsoleMain();
 			cout << "Opcion no valida.\n";
 			break;
-		}*/
+		}
 	} while (opcion != 0);
 	return 0;
 }
