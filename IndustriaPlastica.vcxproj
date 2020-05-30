@@ -148,14 +148,23 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Areas.cpp" />
+    <ClCompile Include="Color.cpp" />
+    <ClCompile Include="Figura.cpp" />
     <ClCompile Include="IndustriaPlastica.cpp" />
     <ClCompile Include="LecturaDeArchivo.cpp" />
+    <ClCompile Include="ListaColor.cpp" />
+    <ClCompile Include="ListaFigura.cpp" />
     <ClCompile Include="Listas.cpp" />
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Areas.h" />
+    <ClInclude Include="Color.h" />
+    <ClInclude Include="Figura.h" />
     <ClInclude Include="IndustriaPlastica.h" />
     <ClInclude Include="LecturaDeArchivo.h" />
+    <ClInclude Include="ListaColor.h" />
+    <ClInclude Include="ListaFigura.h" />
     <ClInclude Include="Listas.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

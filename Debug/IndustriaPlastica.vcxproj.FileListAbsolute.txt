@@ -1,2 +1,4 @@
 C:\Users\eleotta\Desktop\C++\IndustriaPlastica\IndustriaPlastica\Debug\IndustriaPlastica.exe
 C:\Users\eleotta\Desktop\C++\IndustriaPlastica\IndustriaPlastica\Debug\IndustriaPlastica.pdb
+C:\Users\sofia\Source\Repos\EzequielLeonardoLeotta\IndustriaPlastica\Debug\IndustriaPlastica.exe
+C:\Users\sofia\Source\Repos\EzequielLeonardoLeotta\IndustriaPlastica\Debug\IndustriaPlastica.pdb

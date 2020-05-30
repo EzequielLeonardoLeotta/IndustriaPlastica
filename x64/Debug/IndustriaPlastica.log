@@ -1,7 +1,2 @@
-﻿  IndustriaPlastica.cpp
-C:\Users\eleotta\Desktop\C++\IndustriaPlastica\Listas.h(26,23): warning C4091: 'typedef ': se ha omitido a la izquierda de 'Dato' cuando no hay ninguna variable declarada
-C:\Users\eleotta\Desktop\C++\IndustriaPlastica\IndustriaPlastica.cpp(71,3): warning C4060: la instrucción switch no contiene etiquetas 'case' ni 'default'
-  Listas.cpp
-C:\Users\eleotta\Desktop\C++\IndustriaPlastica\Listas.h(26,23): warning C4091: 'typedef ': se ha omitido a la izquierda de 'Dato' cuando no hay ninguna variable declarada
-  Generando código...
+﻿  LINK : no se encontró C:\Users\eleotta\Desktop\C++\IndustriaPlastica\x64\Debug\IndustriaPlastica.exe o no lo generó el último vínculo incremental; ejecutando vínculo completo
   IndustriaPlastica.vcxproj -> C:\Users\eleotta\Desktop\C++\IndustriaPlastica\x64\Debug\IndustriaPlastica.exe
