@@ -65,4 +65,7 @@ void eliminarLista(ListaFigura& lista);
 
 void recorrerLista(ListaFigura& lista);
 
+//Inserta la figura en la lista de figuras general
+void insertarFiguraEnListaDeFiguras(ListaFigura& listaFigura, Figura figura);
+
 #endif

@@ -58,13 +58,10 @@ PtrNodoListaFigura siguiente(ListaFigura& lista, PtrNodoListaFigura ptrSig)
 
 PtrNodoListaFigura crearNodo(Figura figura)
 {
-
 	PtrNodoListaFigura aux = new NodoListaFigura;
 	aux->figu = figura;
 	aux->sgte = finLista();
 	return aux;
-
-
 }
 
 PtrNodoListaFigura adicionarDespues(ListaFigura& lista, Figura figu, PtrNodoListaFigura ptr)
@@ -88,9 +85,9 @@ PtrNodoListaFigura adicionarFinal(ListaFigura lista, Figura figu)
 	return adicionarDespues(lista, figu, ultimo(lista));
 }
 
-PtrNodoListaFigura adicionarPrimero(ListaFigura& lista, Figura figu)
+PtrNodoListaFigura adicionarPrimero(ListaFigura& lista, Figura figura)
 {
-	PtrNodoListaFigura aux = crearNodo(figu);
+	PtrNodoListaFigura aux = crearNodo(figura);
 	aux->sgte = lista.primero;
 	lista.primero = aux;
 	return aux;
@@ -120,6 +117,7 @@ void obtenerDato(ListaFigura& lista, Figura& figura, PtrNodoListaFigura ptrNodo)
    if ((!listaVacia(lista)) && (ptrNodo != finLista()))
 		figura = ptrNodo->figu;
 }
+
 void eliminarNodoListaFigura(ListaFigura& lista, PtrNodoListaFigura ptrNodo)
 {
 	PtrNodoListaFigura ptrPrevio;
@@ -210,6 +208,9 @@ int Longitud(ListaFigura& lista)
 		ptrCursor = siguiente(lista, ptrCursor);
 	}
 	return longitud;
+}
 
-
+void insertarFiguraEnListaDeFiguras(ListaFigura& listaFigura, Figura figura)
+{
+	listaVacia(listaFigura) ? adicionarPrimero(listaFigura, figura) : adicionarFinal(listaFigura, figura);
 }

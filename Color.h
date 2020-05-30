@@ -8,10 +8,10 @@ typedef struct Color {
 	ListaFigura lstfigura;
 };
 
-void constructor(Color& color, string descripcion);
+void constructor(Color& color, Figura figura);
 void setDescripcion(Color& color, string descripcion);
 void setListaFigura(Color& color, ListaFigura lista);
-string getNombre(Color& color);
-ListaFigura getLista(Color& color);
+string getDescripcion(Color& color);
+ListaFigura getListaFigura(Color& color);
 
 #endif

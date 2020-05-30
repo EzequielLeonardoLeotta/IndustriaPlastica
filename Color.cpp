@@ -1,27 +1,28 @@
 #include "Color.h"
 
-void constructor(Color& color, string descripcion)
+void constructor(Color& color, Figura figura)
+{
+	color.descripcion = getColor(figura);
+	crearListaFigura(color.lstfigura);
+	adicionarPrimero(color.lstfigura, figura);
+}
+
+void setDescripcion(Color& color, string descripcion)
 {
 	color.descripcion = descripcion;
-	crearListaFigura(color.lstfigura);
 }
 
-void setDescripcion(Color& colo, string descripcion)
+void setListaFigura(Color& color, ListaFigura lista)
 {
-	colo.descripcion = descripcion;
+	color.lstfigura = lista;
 }
 
-void setListaFigura(Color& colo, ListaFigura lista)
+string getDescripcion(Color& color)
 {
-	colo.lstfigura = lista;
+	return color.descripcion;
 }
 
-string getNombre(Color& colo)
+ListaFigura getListaFigura(Color& color)
 {
-	return colo.descripcion;
-}
-
-ListaFigura getLista(Color& colo)
-{
-	return colo.lstfigura;
+	return color.lstfigura;
 }

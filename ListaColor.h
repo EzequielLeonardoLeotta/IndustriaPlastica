@@ -26,8 +26,10 @@ PtrNodoListaColor adicionarFinal(ListaColor& lista, Color color);
 void obtenerDatoLcolor(ListaColor& lista, Color& color, PtrNodoListaColor ptrNodo);
 PtrNodoListaColor anterior(ListaColor& lista, PtrNodoListaColor ptrNodo);
 PtrNodoListaColor crearNodoListaColor(Color color);
-PtrNodoListaColor adicionarPrincipio(ListaColor& lista, Color color);
+PtrNodoListaColor adicionarPrimero(ListaColor& lista, Color color);
 PtrNodoListaColor adicionarDespues(ListaColor& lista, Color color, PtrNodoListaColor ptrNodo);
 PtrNodoListaColor adicionarFinal(ListaColor& lista, Color color);
+void imprimirListaColor(ListaColor lst);
+void insertarFiguraEnListaDeColor(ListaColor& listaColor, Figura figura);
 
 #endif

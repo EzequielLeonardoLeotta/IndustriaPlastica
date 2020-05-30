@@ -1,4 +1,5 @@
 ﻿#include "ListaColor.h"
+#include <iostream>
 
 void crearListaColor(ListaColor& lista)
 {
@@ -38,7 +39,6 @@ PtrNodoListaColor adicionarFinal(ListaColor& lista, Color color)
 	return adicionarDespues(lista, color, ultimo(lista));
 }
 
-
 void obtenerDatoLcolor(ListaColor& lista, Color& color, PtrNodoListaColor ptrNodo)
 {
 	if ((!listaVacia(lista)) && (ptrNodo != finColor()))
@@ -67,7 +67,7 @@ PtrNodoListaColor crearNodoListaColor(Color color)
 	return ptrAux;
 }
 
-PtrNodoListaColor adicionarPrincipio(ListaColor& lista, Color color)
+PtrNodoListaColor adicionarPrimero(ListaColor& lista, Color color)
 {
 	PtrNodoListaColor ptrNuevoNodo = crearNodoListaColor(color);
 
@@ -84,7 +84,7 @@ PtrNodoListaColor adicionarDespues(ListaColor& lista, Color colo, PtrNodoListaCo
 
 	/* si la lista esta vacia se adiciona la principio */
 	if (listaVacia(lista)) {
-		ptrNuevoNodo = adicionarPrincipio(lista, colo);
+		ptrNuevoNodo = adicionarPrimero(lista, colo);
 	}
 	else {
 		if (ptrNodo != finColor()) {
@@ -98,4 +98,49 @@ PtrNodoListaColor adicionarDespues(ListaColor& lista, Color colo, PtrNodoListaCo
 	}
 
 	return ptrNuevoNodo;
+}
+
+void imprimirListaColor(ListaColor lst)
+{
+	PtrNodoListaColor cursor;
+	cursor = primero(lst);
+	Color aux;
+	Figura fig;
+
+	ListaFigura figu;
+	crearListaFigura(figu);
+
+
+	while (cursor != finColor()) {
+		obtenerDatoLcolor(lst, aux, cursor);
+		cout << getDescripcion(aux) << endl;
+		figu = getListaFigura(aux);
+		recorrerLista(figu);
+		cursor = siguiente(lst, cursor);
+	}
+}
+
+void insertarFiguraEnListaDeColor(ListaColor& listaColor, Figura figura)
+{
+	bool existe = false;
+	PtrNodoListaColor cursor;
+	cursor = primero(listaColor);
+	Color color;
+
+	while (cursor != finColor() && !existe) {
+		obtenerDatoLcolor(listaColor, color, cursor);
+		if (getColor(figura) == getDescripcion(color))
+		{
+			adicionarFinal(getListaFigura(color), figura);
+			existe = true;
+		}
+		else
+			cursor = siguiente(listaColor, cursor);
+	}
+
+	if(!existe)
+	{
+		constructor(color, figura);
+		listaVacia(listaColor) ? adicionarPrimero(listaColor, color) : adicionarFinal(listaColor, color);
+	}
 }

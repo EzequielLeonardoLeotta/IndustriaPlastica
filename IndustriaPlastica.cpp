@@ -6,6 +6,7 @@
 #include<string>
 #include <iomanip>
 #include "IndustriaPlastica.h"
+#include "ListaColor.h"
 using namespace std;
 
 string linea = "";
@@ -16,6 +17,8 @@ string valores[4];
 int iterador = 0;
 
 ListaFigura listaFigura;
+ListaColor listaColor;
+Color colorAux;
 Figura figura;
 TipoFigura tipoFigura;
 string color = "";
@@ -30,7 +33,8 @@ void limpiarConsola() { system("cls"); }
 
 void insertarFiguras(queue<string> contenidoArchivo)
 {
-	crearListaFigura(listaFigura); 
+	crearListaFigura(listaFigura);
+	crearListaColor(listaColor);
 
 	while(!contenidoArchivo.empty()) //mientras la cola tenga datos la recorro
 	{
@@ -40,11 +44,12 @@ void insertarFiguras(queue<string> contenidoArchivo)
 
 		insertarDatosEnVariables();
 
-		//construyo la figura, calculo su area y la inserto en la lista
+		//construyo la figura, calculo su area y la inserto en la lista segun su color y al final en la lista general
 		constructor(figura, tipoFigura, color, area, parametro1, parametro2);
 		setArea(figura, calcularArea(figura));
-		listaVacia(listaFigura) ? adicionarPrimero(listaFigura, figura) : adicionarFinal(listaFigura, figura);
-
+		insertarFiguraEnListaDeColor(listaColor, figura);
+		insertarFiguraEnListaDeFiguras(listaFigura, figura);
+		
 		//vacio el array y pongo el iterador en 0
 		iterador = 0;
 		valores[0] = "";
@@ -54,7 +59,7 @@ void insertarFiguras(queue<string> contenidoArchivo)
 		contenidoArchivo.pop(); // elimino el valor
 	}
 	//Esto se usa solo para probar
-	//recorrerLista(listaFigura); 
+	//recorrerLista(listaFigura);
 }
 
 void insertarDatosEnArray(queue<string> contenidoArchivo)
