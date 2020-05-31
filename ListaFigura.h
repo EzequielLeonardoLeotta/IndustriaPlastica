@@ -62,7 +62,9 @@ void eliminarNodoListaFigura(ListaFigura& lista, PtrNodoListaFigura ptrNodo);
 
 void eliminarLista(ListaFigura& lista);
 
-void recorrerLista(ListaFigura& lista);
+void imprimirLista(ListaFigura& lista);
+
+int obtenerPlasticoUtilizado(ListaFigura& lista);
 
 //Inserta la figura en la lista de figuras general
 void insertarFiguraEnListaDeFiguras(ListaFigura& listaFigura, Figura figura);
