@@ -217,11 +217,11 @@ void insertarFiguraEnListaDeFiguras(ListaFigura& listaFigura, Figura figura)
 	listaVacia(listaFigura) ? adicionarPrimero(listaFigura, figura) : adicionarFinal(listaFigura, figura);
 }
 
-int obtenerPlasticoUtilizado(ListaFigura& lista) {
+float obtenerPlasticoUtilizado(ListaFigura& lista) {
 	PtrNodoListaFigura cursor;
 	cursor = primero(lista);
 	Figura auxFigura;
-	int areaTotal = 0;
+	float areaTotal = 0;
 
 	while (cursor != finLista()) {
 		obtenerDato(lista, auxFigura, cursor);
