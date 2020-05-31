@@ -2,11 +2,11 @@
 #include "Areas.h"
 #include "Figura.h"
 #include "ListaFigura.h"
+#include "ListaColor.h"
 #include <iostream>
 #include<string>
 #include <iomanip>
 #include "IndustriaPlastica.h"
-#include "ListaColor.h"
 using namespace std;
 
 string linea = "";
@@ -32,11 +32,9 @@ size_t posicionPuntoYComa = 0;
 void pausarConsola() { system("pause"); }
 void limpiarConsola() { system("cls"); }
 
-ListaFigura insertarFiguras(queue<string> contenidoArchivo)
+ListaFigura insertarFigurasEnListaDeFiguras(queue<string> contenidoArchivo)
 {
-	ListaFigura listaFigura;
 	crearListaFigura(listaFigura); 
-	crearListaColor(listaColor);
 
 	while(!contenidoArchivo.empty()) //mientras la cola tenga datos la recorro
 	{
@@ -49,7 +47,6 @@ ListaFigura insertarFiguras(queue<string> contenidoArchivo)
 		//construyo la figura, calculo su area y la inserto en la lista segun su color y al final en la lista general
 		constructor(figura, tipoFigura, color, area, parametro1, parametro2);
 		setArea(figura, calcularArea(figura));
-		insertarFiguraEnListaDeColor(listaColor, figura);
 		insertarFiguraEnListaDeFiguras(listaFigura, figura);
 		
 		//vacio el array y pongo el iterador en 0
@@ -63,6 +60,36 @@ ListaFigura insertarFiguras(queue<string> contenidoArchivo)
 	//Esto se usa solo para probar
 	//recorrerLista(listaFigura); 
 	return listaFigura;
+}
+
+ListaColor insertarFigurasEnListaDeColor(queue<string> contenidoArchivo)
+{
+	crearListaColor(listaColor);
+
+	while (!contenidoArchivo.empty()) //mientras la cola tenga datos la recorro
+	{
+		insertarDatosEnArray(contenidoArchivo);
+
+		reemplazoPorPuntos();
+
+		insertarDatosEnVariables();
+
+		//construyo la figura, calculo su area y la inserto en la lista segun su color y al final en la lista general
+		constructor(figura, tipoFigura, color, area, parametro1, parametro2);
+		setArea(figura, calcularArea(figura));
+		insertarFiguraEnListaDeColor(listaColor, figura);
+
+		//vacio el array y pongo el iterador en 0
+		iterador = 0;
+		valores[0] = "";
+		valores[1] = "";
+		valores[2] = "";
+		valores[3] = "";
+		contenidoArchivo.pop(); // elimino el valor
+	}
+	//Esto se usa solo para probar, no está hecho para lista de color
+	//recorrerLista(listaColor); 
+	return listaColor;
 }
 
 void insertarDatosEnArray(queue<string> contenidoArchivo)

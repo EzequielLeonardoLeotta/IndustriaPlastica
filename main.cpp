@@ -7,6 +7,7 @@
 #include<string>
 #include <iomanip>
 #include "IndustriaPlastica.h"
+#include "ListaColor.h"
 using namespace std;
 
 int main()
@@ -24,7 +25,9 @@ int main()
 
 	cin >> nombreArchivo;
 	limpiarConsola();
-	ListaFigura listaFigura=insertarFiguras(leerArchivo(nombreArchivo));
+	queue<string> contenidoArchivo = leerArchivo(nombreArchivo);
+	ListaFigura listaFigura = insertarFigurasEnListaDeFiguras(contenidoArchivo);
+	ListaColor listaColor = insertarFigurasEnListaDeColor(contenidoArchivo);
 	
 
 	//menu principal

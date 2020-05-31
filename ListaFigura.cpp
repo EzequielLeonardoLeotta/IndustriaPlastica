@@ -6,14 +6,14 @@
 #include <iostream>
 
 
-CompararAreaFigura resultadoComparacion(Figura figu1, Figura figu2)
+CompararAreaFigura resultadoComparacion(Figura figura1, Figura figura2)
 {
 	CompararAreaFigura aux;
 
-	if (getArea(figu1) > getArea(figu2)) {
+	if (getArea(figura1) > getArea(figura2)) {
 		aux=MAYORAREA;
 	}
-	else if (getArea(figu1) < getArea(figu2)) {
+	else if (getArea(figura1) < getArea(figura2)) {
 		aux=MENORAREA;
 	}
 	else {
@@ -36,13 +36,11 @@ bool listaVacia(ListaFigura& lista)
 PtrNodoListaFigura finLista()
 {
 	return NULL;
-
 }
 
 PtrNodoListaFigura primero(ListaFigura& lista)
 {
 	return lista.primero;
-
 }
 
 PtrNodoListaFigura siguiente(ListaFigura& lista, PtrNodoListaFigura ptrSig)
@@ -59,30 +57,28 @@ PtrNodoListaFigura siguiente(ListaFigura& lista, PtrNodoListaFigura ptrSig)
 PtrNodoListaFigura crearNodo(Figura figura)
 {
 	PtrNodoListaFigura aux = new NodoListaFigura;
-	aux->figu = figura;
+	aux->figura = figura;
 	aux->sgte = finLista();
 	return aux;
 }
 
-PtrNodoListaFigura adicionarDespues(ListaFigura& lista, Figura figu, PtrNodoListaFigura ptr)
+PtrNodoListaFigura adicionarDespues(ListaFigura& lista, Figura figura, PtrNodoListaFigura ptr)
 {
-
 	PtrNodoListaFigura nvoNodo = finLista();
 	if (listaVacia(lista))
-		nvoNodo = adicionarPrimero(lista, figu);
+		nvoNodo = adicionarPrimero(lista, figura);
 	else
 	{
-		nvoNodo = crearNodo(figu);
+		nvoNodo = crearNodo(figura);
 		nvoNodo->sgte = ptr->sgte;
 		ptr->sgte = nvoNodo;
 	}
 	return nvoNodo;
-
 }
 
-PtrNodoListaFigura adicionarFinal(ListaFigura lista, Figura figu)
+PtrNodoListaFigura adicionarFinal(ListaFigura lista, Figura figura)
 {
-	return adicionarDespues(lista, figu, ultimo(lista));
+	return adicionarDespues(lista, figura, ultimo(lista));
 }
 
 PtrNodoListaFigura adicionarPrimero(ListaFigura& lista, Figura figura)
@@ -103,19 +99,17 @@ PtrNodoListaFigura anterior(ListaFigura& lista, PtrNodoListaFigura ptroNodo)
 		Ptrocursor = siguiente(lista, Ptrocursor);
 	}
 	return ptrPrevio;
-
 }
 
 PtrNodoListaFigura ultimo(ListaFigura& lista)
 {
 	return anterior(lista, finLista());
-
 }
 
 void obtenerDato(ListaFigura& lista, Figura& figura, PtrNodoListaFigura ptrNodo)
 {
    if ((!listaVacia(lista)) && (ptrNodo != finLista()))
-		figura = ptrNodo->figu;
+		figura = ptrNodo->figura;
 }
 
 void eliminarNodoListaFigura(ListaFigura& lista, PtrNodoListaFigura ptrNodo)
@@ -143,8 +137,7 @@ void eliminarLista(ListaFigura& lista){
 	/* retira uno a uno los nodos de la lista */
 	while (!listaVacia(lista))
 		eliminarNodoListaFigura(lista, primero(lista));
-}
-
+	}
 }
 
 void recorrerLista(ListaFigura& lista)

@@ -1,2 +1,9 @@
-﻿  LINK : no se encontró C:\Users\eleotta\Desktop\C++\IndustriaPlastica\x64\Debug\IndustriaPlastica.exe o no lo generó el último vínculo incremental; ejecutando vínculo completo
+﻿  IndustriaPlastica.cpp
+C:\Users\eleotta\Desktop\C++\IndustriaPlastica\Figura.h(19,2): warning C4091: 'typedef ': se ha omitido a la izquierda de 'Figura' cuando no hay ninguna variable declarada
+C:\Users\eleotta\Desktop\C++\IndustriaPlastica\Color.h(9,2): warning C4091: 'typedef ': se ha omitido a la izquierda de 'Color' cuando no hay ninguna variable declarada
+  main.cpp
+C:\Users\eleotta\Desktop\C++\IndustriaPlastica\Listas.h(26,23): warning C4091: 'typedef ': se ha omitido a la izquierda de 'Dato' cuando no hay ninguna variable declarada
+C:\Users\eleotta\Desktop\C++\IndustriaPlastica\Figura.h(19,2): warning C4091: 'typedef ': se ha omitido a la izquierda de 'Figura' cuando no hay ninguna variable declarada
+C:\Users\eleotta\Desktop\C++\IndustriaPlastica\Color.h(9,2): warning C4091: 'typedef ': se ha omitido a la izquierda de 'Color' cuando no hay ninguna variable declarada
+  Generando código...
   IndustriaPlastica.vcxproj -> C:\Users\eleotta\Desktop\C++\IndustriaPlastica\x64\Debug\IndustriaPlastica.exe
