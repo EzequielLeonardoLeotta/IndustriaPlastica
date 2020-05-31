@@ -66,6 +66,8 @@ void imprimirLista(ListaFigura& lista);
 
 float obtenerPlasticoUtilizado(ListaFigura& lista);
 
+void obtenerPlasticoUtilizadoPorFigura(ListaFigura& listaFigura);
+
 //Inserta la figura en la lista de figuras general
 void insertarFiguraEnListaDeFiguras(ListaFigura& listaFigura, Figura figura);
 

@@ -231,3 +231,46 @@ float obtenerPlasticoUtilizado(ListaFigura& lista) {
 	return areaTotal;
 };
 
+void obtenerPlasticoUtilizadoPorFigura(ListaFigura& listaFigura) 
+{
+	PtrNodoListaFigura cursor;
+	cursor = primero(listaFigura);
+	Figura auxFigura;
+	float areaTotalCirculo = 0;
+	float areaTotalCilindro = 0;
+	float areaTotalCubo = 0;
+	float areaTotalTriangulo = 0;
+	float areaTotalRectangulo = 0;
+	TipoFigura tipoFigura;
+
+	while (cursor != finLista()) {
+		obtenerDato(listaFigura, auxFigura, cursor);
+		tipoFigura = getTipoFigura(auxFigura);
+		switch ((int)tipoFigura)
+		{
+		case 0:
+			areaTotalCirculo += getArea(auxFigura);
+			break;
+		case 1:
+			areaTotalCilindro += getArea(auxFigura);
+			break;
+		case 2:
+			areaTotalCubo += getArea(auxFigura);
+			break;
+		case 3:
+			areaTotalTriangulo += getArea(auxFigura);
+			break;
+		case 4:
+			areaTotalRectangulo += getArea(auxFigura);
+			break;
+		}
+	
+		cursor = siguiente(listaFigura, cursor);
+	}
+
+	cout << "Plastico Utilizado para Circulo: " << areaTotalCirculo << " cm." << "\n" << endl;
+	cout << "Plastico Utilizado para Cilindro: " << areaTotalCilindro << " cm." << "\n" << endl;
+	cout << "Plastico Utilizado para Cubo: " << areaTotalCubo << " cm." << "\n" << endl;
+	cout << "Plastico Utilizado para Triangulo: " << areaTotalTriangulo << " cm." << "\n" << endl;
+	cout << "Plastico Utilizado para Rectangulo: " << areaTotalRectangulo << " cm." << "\n" << endl;
+};

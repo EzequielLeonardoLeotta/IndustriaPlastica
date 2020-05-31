@@ -38,7 +38,7 @@ int main()
 			"2:Cantidad de Plastico Utilizado" << "\n" <<
 			"3:Cantidad de Plastico Utilizado por Figura" << "\n" <<
 			"4:Mostrar Total por Figura - Color" << "\n" <<
-			"5:Orden de Produccion de Figuras" << "\n" <<
+			"5:Orden de Produccion de Figuras por Color" << "\n" <<
 			"6:Orden de Figuras Segun sus Areas" << "\n" <<
 			"0:Salir" << "\n\n" <<
 			"Ingrese una opcion: ";
@@ -60,20 +60,17 @@ int main()
 			limpiarConsola();
 			break;
 		case 3:
-			//cout << "Area = " << area(radio) << endl;
+			cout << "\n" << "Plastico Utilizado por Figura" << "\n" << endl;
+			obtenerPlasticoUtilizadoPorFigura(listaFigura);
 			pausarConsola();
 			limpiarConsola();
 			break;
 		case 4:
-			//cout << "Ingrese angulo: " << endl;
-			//cin >> angulo;
-			//cout << "Longitud del arco = " << longitudDelArco(radio, angulo) << endl;
 			limpiarConsola();
 			pausarConsola();
 			break;
 		case 0: exit(EXIT_FAILURE);
 		default:
-			//cleanConsoleMain();
 			cout << "Opcion no valida.\n";
 			break;
 		}

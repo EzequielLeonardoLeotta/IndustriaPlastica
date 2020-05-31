@@ -57,8 +57,6 @@ ListaFigura insertarFigurasEnListaDeFiguras(queue<string> contenidoArchivo)
 		valores[3] = "";
 		contenidoArchivo.pop(); // elimino el valor
 	}
-	//Esto se usa solo para probar
-	//imprimirLista(listaFigura); 
 	return listaFigura;
 }
 
