@@ -48,25 +48,28 @@ int main()
 		switch (opcion)
 		{
 		case 1:
-			cout << "Listado de Figuras" << "\n" << endl;
+			cout << "\n" << "Listado de Figuras" << "\n" << endl;
 			imprimirLista(listaFigura);
 			pausarConsola();
+			limpiarConsola();
 			break;
 		case 2:
-			cout << "Plastico Utilizado" << "\n" << endl;
+			cout << "\n" << "Plastico Utilizado" << "\n" << endl;
 			cout << "El total de plastico utilizado en el lote es de " << obtenerPlasticoUtilizado(listaFigura) << " cm." << "\n" << endl;
 			pausarConsola();
+			limpiarConsola();
 			break;
 		case 3:
 			//cout << "Area = " << area(radio) << endl;
-			//pausarConsola();
+			pausarConsola();
+			limpiarConsola();
 			break;
 		case 4:
-			//cleanConsoleMain();
 			//cout << "Ingrese angulo: " << endl;
 			//cin >> angulo;
 			//cout << "Longitud del arco = " << longitudDelArco(radio, angulo) << endl;
-			//pausarConsola();
+			limpiarConsola();
+			pausarConsola();
 			break;
 		case 0: exit(EXIT_FAILURE);
 		default:
