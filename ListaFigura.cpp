@@ -120,6 +120,7 @@ void obtenerDato(ListaFigura& lista, Figura& figura, PtrNodoListaFigura ptrNodo)
    if ((!listaVacia(lista)) && (ptrNodo != finLista()))
 		figura = ptrNodo->figu;
 }
+
 void eliminarNodoListaFigura(ListaFigura& lista, PtrNodoListaFigura ptrNodo)
 {
 	PtrNodoListaFigura ptrPrevio;
@@ -149,7 +150,7 @@ void eliminarLista(ListaFigura& lista){
 
 }
 
-void recorrerLista(ListaFigura& lista)
+void imprimirLista(ListaFigura& lista)
 {
 	PtrNodoListaFigura cursor;
 	cursor = primero(lista);
@@ -161,32 +162,41 @@ void recorrerLista(ListaFigura& lista)
 		obtenerDato(lista, auxFigura, cursor);
 
 		tipo = (int)auxFigura.tipoFigura;
-
+		
 		switch (tipo)
 		{
 			case 0: 
 				tipoFigura = "circulo";
+				cout << "Tipo: " << tipoFigura << endl;
+				cout << "Radio: " << getParametro1(auxFigura) << " cm." << endl;
 				break;
 			case 1:
 				tipoFigura = "cilindro";
+				cout << "Tipo: " << tipoFigura << endl;
+				cout << "Radio: " << getParametro1(auxFigura) << " cm." << endl;
+				cout << "Altura: " << getParametro2(auxFigura) << " cm." << endl;
 				break;
 			case 2:
 				tipoFigura = "cubo";
+				cout << "Tipo: " << tipoFigura << endl;
+				cout << "Lado: " << getParametro1(auxFigura) << " cm." << endl;
 				break;
 			case 3:
 				tipoFigura = "triangulo";
+				cout << "Tipo: " << tipoFigura << endl;
+				cout << "Cateto mayor: " << getParametro1(auxFigura) << " cm." << endl;
+				cout << "Cateto menor: " << getParametro2(auxFigura) << " cm." << endl;
 				break;
 			case 4:
 				tipoFigura = "rectangulo";
+				cout << "Tipo: " << tipoFigura << endl;
+				cout << "Base: " << getParametro1(auxFigura) << " cm." << endl;
+				cout << "Altura: " << getParametro2(auxFigura) << " cm." << endl;
 				break;
 		}
 
-		cout << tipoFigura << endl;
-		cout << getColor(auxFigura) << endl;
-		cout << getParametro1(auxFigura) << endl;
-		cout << getParametro2(auxFigura) << endl;
-		cout << "Area:" << endl;
-		cout << getArea(auxFigura) << endl;
+		cout << "Color: " << getColor(auxFigura) << endl;
+		cout << "Plastico utilizado: " << getArea(auxFigura) << " cm." << endl;
 		cout << "\n" << endl;
 
 		cursor = siguiente(lista, cursor);
@@ -210,6 +220,18 @@ int Longitud(ListaFigura& lista)
 		ptrCursor = siguiente(lista, ptrCursor);
 	}
 	return longitud;
-
-
 }
+
+int obtenerPlasticoUtilizado(ListaFigura& lista) {
+	PtrNodoListaFigura cursor;
+	cursor = primero(lista);
+	Figura auxFigura;
+	int areaTotal = 0;
+
+	while (cursor != finLista()) {
+		obtenerDato(lista, auxFigura, cursor);
+		areaTotal += getArea(auxFigura);
+		cursor = siguiente(lista, cursor);
+	}
+	return areaTotal;
+};

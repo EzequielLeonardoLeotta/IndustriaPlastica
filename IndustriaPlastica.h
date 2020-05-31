@@ -14,6 +14,9 @@ void pausarConsola();
 //Limpia la consola
 void limpiarConsola();
 
+// Obtener la lista figura
+ListaFigura getListaFigura();
+
 //Inserta las figuras en la lista (procedimiento general que contiene a los de abajo)
 void insertarFiguras(queue<string> contenidoArchivo);
 

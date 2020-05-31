@@ -63,6 +63,8 @@ void eliminarNodoListaFigura(ListaFigura& lista, PtrNodoListaFigura ptrNodo);
 
 void eliminarLista(ListaFigura& lista);
 
-void recorrerLista(ListaFigura& lista);
+void imprimirLista(ListaFigura& lista);
+
+int obtenerPlasticoUtilizado(ListaFigura& lista);
 
 #endif

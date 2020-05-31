@@ -19,13 +19,13 @@ int main()
 
 	cout <<
 		"*************   Industria Plastica   ************" << "\n\n" <<
-		"Ingrese nombre de archivo: "
-		<< endl;
+		"Ingrese nombre de archivo: ";
 
 	cin >> nombreArchivo;
 	limpiarConsola();
 	queue<string> contenidoArchivo = leerArchivo(nombreArchivo);
 	insertarFiguras(contenidoArchivo);
+	ListaFigura listaFigura = getListaFigura();
 
 	//menu principal
 	do
@@ -39,38 +39,42 @@ int main()
 			"5:Orden de Produccion de Figuras" << "\n" <<
 			"6:Orden de Figuras Segun sus Areas" << "\n" <<
 			"0:Salir" << "\n\n" <<
-			"Ingrese una opcion: "
-			<< endl;
+			"Ingrese una opcion: ";
 
 		cin >> opcion;
 
-		/*switch (opcion)
+		switch (opcion)
 		{
 		case 1:
-			cout << "Perimetro = " << perimetro(radio) << endl;
-			pauseConsole();
+			cout << "Listado de Figuras" << "\n" << endl;
+			imprimirLista(listaFigura);
+			pausarConsola();
 			break;
+		
 		case 2:
-			cout << "Diametro = " << diametro(radio) << endl;
-			pauseConsole();
+			cout << "Plastico Utilizado" << "\n" << endl;
+			cout << "El total de plastico utilizado en el lote es de " << obtenerPlasticoUtilizado(listaFigura) << " cm." << "\n" << endl;
+			pausarConsola();
 			break;
+		/*
 		case 3:
 			cout << "Area = " << area(radio) << endl;
-			pauseConsole();
+			pausarConsola();
 			break;
 		case 4:
 			cleanConsoleMain();
 			cout << "Ingrese angulo: " << endl;
 			cin >> angulo;
 			cout << "Longitud del arco = " << longitudDelArco(radio, angulo) << endl;
-			pauseConsole();
+			pausarConsola();
 			break;
+		*/
 		case 0: exit(EXIT_FAILURE);
 		default:
-			cleanConsoleMain();
+			limpiarConsola();
 			cout << "Opcion no valida.\n";
 			break;
-		}*/
+		}
 	} while (opcion != 0);
 	return 0;
 }

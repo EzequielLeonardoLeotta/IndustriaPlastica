@@ -28,6 +28,10 @@ size_t posicionPuntoYComa = 0;
 void pausarConsola() { system("pause"); }
 void limpiarConsola() { system("cls"); }
 
+ListaFigura getListaFigura() {
+	return listaFigura;
+};
+
 void insertarFiguras(queue<string> contenidoArchivo)
 {
 	crearListaFigura(listaFigura); 
@@ -54,7 +58,7 @@ void insertarFiguras(queue<string> contenidoArchivo)
 		contenidoArchivo.pop(); // elimino el valor
 	}
 	//Esto se usa solo para probar
-	//recorrerLista(listaFigura); 
+	//imprimirLista(listaFigura); 
 }
 
 void insertarDatosEnArray(queue<string> contenidoArchivo)
