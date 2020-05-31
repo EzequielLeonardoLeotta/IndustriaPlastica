@@ -115,7 +115,7 @@ void imprimirListaColor(ListaColor lst)
 		obtenerDatoLcolor(lst, aux, cursor);
 		cout << getDescripcion(aux) << endl;
 		figu = getListaFigura(aux);
-		recorrerLista(figu);
+		imprimirLista(figu);
 		cursor = siguiente(lst, cursor);
 	}
 }

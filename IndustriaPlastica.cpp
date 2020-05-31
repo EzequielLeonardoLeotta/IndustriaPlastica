@@ -58,7 +58,7 @@ ListaFigura insertarFigurasEnListaDeFiguras(queue<string> contenidoArchivo)
 		contenidoArchivo.pop(); // elimino el valor
 	}
 	//Esto se usa solo para probar
-	//recorrerLista(listaFigura); 
+	//imprimirLista(listaFigura); 
 	return listaFigura;
 }
 
@@ -88,7 +88,7 @@ ListaColor insertarFigurasEnListaDeColor(queue<string> contenidoArchivo)
 		contenidoArchivo.pop(); // elimino el valor
 	}
 	//Esto se usa solo para probar, no está hecho para lista de color
-	//recorrerLista(listaColor); 
+	//imprimirLista(listaColor); 
 	return listaColor;
 }
 

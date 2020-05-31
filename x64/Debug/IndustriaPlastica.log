@@ -1,9 +1,18 @@
-﻿  IndustriaPlastica.cpp
-C:\Users\eleotta\Desktop\C++\IndustriaPlastica\Figura.h(19,2): warning C4091: 'typedef ': se ha omitido a la izquierda de 'Figura' cuando no hay ninguna variable declarada
-C:\Users\eleotta\Desktop\C++\IndustriaPlastica\Color.h(9,2): warning C4091: 'typedef ': se ha omitido a la izquierda de 'Color' cuando no hay ninguna variable declarada
+﻿  Color.cpp
+C:\Users\Gonzalo Cerbelli\Documents\AYED\IndustriaPlastica\Figura.h(19,2): warning C4091: 'typedef ': se ha omitido a la izquierda de 'Figura' cuando no hay ninguna variable declarada
+C:\Users\Gonzalo Cerbelli\Documents\AYED\IndustriaPlastica\Color.h(9,2): warning C4091: 'typedef ': se ha omitido a la izquierda de 'Color' cuando no hay ninguna variable declarada
+  IndustriaPlastica.cpp
+C:\Users\Gonzalo Cerbelli\Documents\AYED\IndustriaPlastica\Figura.h(19,2): warning C4091: 'typedef ': se ha omitido a la izquierda de 'Figura' cuando no hay ninguna variable declarada
+C:\Users\Gonzalo Cerbelli\Documents\AYED\IndustriaPlastica\Color.h(9,2): warning C4091: 'typedef ': se ha omitido a la izquierda de 'Color' cuando no hay ninguna variable declarada
+  ListaColor.cpp
+C:\Users\Gonzalo Cerbelli\Documents\AYED\IndustriaPlastica\Figura.h(19,2): warning C4091: 'typedef ': se ha omitido a la izquierda de 'Figura' cuando no hay ninguna variable declarada
+C:\Users\Gonzalo Cerbelli\Documents\AYED\IndustriaPlastica\Color.h(9,2): warning C4091: 'typedef ': se ha omitido a la izquierda de 'Color' cuando no hay ninguna variable declarada
+  ListaFigura.cpp
+C:\Users\Gonzalo Cerbelli\Documents\AYED\IndustriaPlastica\Figura.h(19,2): warning C4091: 'typedef ': se ha omitido a la izquierda de 'Figura' cuando no hay ninguna variable declarada
+C:\Users\Gonzalo Cerbelli\Documents\AYED\IndustriaPlastica\ListaFigura.cpp(228,34): warning C4244: '+=': conversión de 'float' a 'int'; posible pérdida de datos
   main.cpp
-C:\Users\eleotta\Desktop\C++\IndustriaPlastica\Listas.h(26,23): warning C4091: 'typedef ': se ha omitido a la izquierda de 'Dato' cuando no hay ninguna variable declarada
-C:\Users\eleotta\Desktop\C++\IndustriaPlastica\Figura.h(19,2): warning C4091: 'typedef ': se ha omitido a la izquierda de 'Figura' cuando no hay ninguna variable declarada
-C:\Users\eleotta\Desktop\C++\IndustriaPlastica\Color.h(9,2): warning C4091: 'typedef ': se ha omitido a la izquierda de 'Color' cuando no hay ninguna variable declarada
+C:\Users\Gonzalo Cerbelli\Documents\AYED\IndustriaPlastica\Listas.h(26,23): warning C4091: 'typedef ': se ha omitido a la izquierda de 'Dato' cuando no hay ninguna variable declarada
+C:\Users\Gonzalo Cerbelli\Documents\AYED\IndustriaPlastica\Figura.h(19,2): warning C4091: 'typedef ': se ha omitido a la izquierda de 'Figura' cuando no hay ninguna variable declarada
+C:\Users\Gonzalo Cerbelli\Documents\AYED\IndustriaPlastica\Color.h(9,2): warning C4091: 'typedef ': se ha omitido a la izquierda de 'Color' cuando no hay ninguna variable declarada
   Generando código...
-  IndustriaPlastica.vcxproj -> C:\Users\eleotta\Desktop\C++\IndustriaPlastica\x64\Debug\IndustriaPlastica.exe
+  IndustriaPlastica.vcxproj -> C:\Users\Gonzalo Cerbelli\Documents\AYED\IndustriaPlastica\x64\Debug\IndustriaPlastica.exe
