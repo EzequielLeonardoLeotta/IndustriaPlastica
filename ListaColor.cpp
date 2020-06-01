@@ -78,19 +78,19 @@ PtrNodoListaColor adicionarPrimero(ListaColor& lista, Color color)
 	return ptrNuevoNodo;
 }
 
-PtrNodoListaColor adicionarDespues(ListaColor& lista, Color colo, PtrNodoListaColor ptrNodo)
+PtrNodoListaColor adicionarDespues(ListaColor& lista, Color color, PtrNodoListaColor ptrNodo)
 {
 	PtrNodoListaColor ptrNuevoNodo = finColor();
 
 	/* si la lista esta vacia se adiciona la principio */
 	if (listaVacia(lista)) {
-		ptrNuevoNodo = adicionarPrimero(lista, colo);
+		ptrNuevoNodo = adicionarPrimero(lista, color);
 	}
 	else {
 		if (ptrNodo != finColor()) {
 
 			/* crea el nodo y lo intercala en la lista */
-			ptrNuevoNodo = crearNodoListaColor(colo);
+			ptrNuevoNodo = crearNodoListaColor(color);
 
 			ptrNuevoNodo->sgte = ptrNodo->sgte;
 			ptrNodo->sgte = ptrNuevoNodo;
@@ -100,23 +100,20 @@ PtrNodoListaColor adicionarDespues(ListaColor& lista, Color colo, PtrNodoListaCo
 	return ptrNuevoNodo;
 }
 
-void imprimirListaColor(ListaColor lst)
+void imprimirListaColor(ListaColor listaColor)
 {
 	PtrNodoListaColor cursor;
-	cursor = primero(lst);
-	Color aux;
-	Figura fig;
-
-	ListaFigura figu;
-	crearListaFigura(figu);
-
+	cursor = primero(listaColor);
+	Color color;
+	ListaFigura listaFigura;
+	crearListaFigura(listaFigura);
 
 	while (cursor != finColor()) {
-		obtenerDatoLcolor(lst, aux, cursor);
-		cout << getDescripcion(aux) << endl;
-		figu = getListaFigura(aux);
-		imprimirLista(figu);
-		cursor = siguiente(lst, cursor);
+		obtenerDatoLcolor(listaColor, color, cursor);
+		cout << "\n" << "Figuras de Color : " << getDescripcion(color) << "\n" <<endl;
+		listaFigura = getListaFigura(color);
+		imprimirLista(listaFigura);
+		cursor = siguiente(listaColor, cursor);
 	}
 }
 

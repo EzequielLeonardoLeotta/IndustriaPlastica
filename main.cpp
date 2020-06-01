@@ -70,11 +70,13 @@ int main()
 			pausarConsola();
 			break;
 		case 5:
-			limpiarConsola();
+			cout << "\n" << "Orden de Produccion de Figuras por Color" << "\n" << endl;
+			imprimirListaColor(listaColor);
 			pausarConsola();
+			limpiarConsola();
 		case 6:
-			limpiarConsola();
 			pausarConsola();
+			limpiarConsola();
 		case 0: exit(EXIT_FAILURE);
 		default:
 			cout << "Opcion no valida.\n";
