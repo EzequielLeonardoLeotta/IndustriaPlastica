@@ -66,8 +66,10 @@ int main()
 			limpiarConsola();
 			break;
 		case 4:
-			limpiarConsola();
+			cout << "\n" << "Plastico Utilizado por Figura - Color" << "\n" << endl;
+			obtenerPlasticoUtilizadoPorFiguraColor(listaColor);
 			pausarConsola();
+			limpiarConsola();
 			break;
 		case 5:
 			cout << "\n" << "Orden de Produccion de Figuras por Color" << "\n" << endl;
