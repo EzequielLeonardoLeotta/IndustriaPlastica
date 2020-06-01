@@ -226,6 +226,7 @@ float obtenerPlasticoUtilizado(ListaFigura& lista) {
 	while (cursor != finLista()) {
 		obtenerDato(lista, auxFigura, cursor);
 		areaTotal += getArea(auxFigura);
+		imprimirDetalleFigura(auxFigura, false);
 		cursor = siguiente(lista, cursor);
 	}
 	return areaTotal;
@@ -246,6 +247,7 @@ void obtenerPlasticoUtilizadoPorFigura(ListaFigura& listaFigura)
 	while (cursor != finLista()) {
 		obtenerDato(listaFigura, auxFigura, cursor);
 		tipoFigura = getTipoFigura(auxFigura);
+
 		switch ((int)tipoFigura)
 		{
 		case 0:
@@ -264,13 +266,41 @@ void obtenerPlasticoUtilizadoPorFigura(ListaFigura& listaFigura)
 			areaTotalRectangulo += getArea(auxFigura);
 			break;
 		}
-	
+
+		imprimirDetalleFigura(auxFigura, false);
 		cursor = siguiente(listaFigura, cursor);
 	}
 
-	cout << "Plastico Utilizado para Circulo: " << areaTotalCirculo << " cm." << "\n" << endl;
+	cout << "\n" << "Plastico Utilizado para Circulo: " << areaTotalCirculo << " cm." << "\n" << endl;
 	cout << "Plastico Utilizado para Cilindro: " << areaTotalCilindro << " cm." << "\n" << endl;
 	cout << "Plastico Utilizado para Cubo: " << areaTotalCubo << " cm." << "\n" << endl;
 	cout << "Plastico Utilizado para Triangulo: " << areaTotalTriangulo << " cm." << "\n" << endl;
 	cout << "Plastico Utilizado para Rectangulo: " << areaTotalRectangulo << " cm." << "\n" << endl;
 };
+
+void imprimirDetalleFigura(Figura figura, bool mostrarColor)
+{
+	TipoFigura tipoFigura = getTipoFigura(figura);
+	
+	switch ((int)tipoFigura)
+	{
+	case 0:
+		cout << "Figura: Circulo, Plastico utilizado: " << getArea(figura) << endl;
+		break;
+	case 1:
+		cout << "Figura: Cilindro, Plastico utilizado: " << getArea(figura) << endl;
+		break;
+	case 2:
+		cout << "Figura: Cubo, Plastico utilizado: " << getArea(figura) << endl;
+		break;
+	case 3:
+		cout << "Figura: Triangulo, Plastico utilizado: " << getArea(figura) << endl;
+		break;
+	case 4:
+		cout << "Figura: Rectangulo, Plastico utilizado: " << getArea(figura) << endl;
+		break;
+	}
+
+	if(mostrarColor)
+		cout << "Color: " << getColor(figura) << endl;
+}

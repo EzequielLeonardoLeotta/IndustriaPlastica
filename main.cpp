@@ -55,7 +55,7 @@ int main()
 			break;
 		case 2:
 			cout << "\n" << "Plastico Utilizado" << "\n" << endl;
-			cout << "El total de plastico utilizado en el lote es de " << obtenerPlasticoUtilizado(listaFigura) << " cm." << "\n" << endl;
+			cout << "\n" << "El total de plastico utilizado en el lote es de " << obtenerPlasticoUtilizado(listaFigura) << " cm." << "\n" << endl;
 			pausarConsola();
 			limpiarConsola();
 			break;
@@ -69,6 +69,12 @@ int main()
 			limpiarConsola();
 			pausarConsola();
 			break;
+		case 5:
+			limpiarConsola();
+			pausarConsola();
+		case 6:
+			limpiarConsola();
+			pausarConsola();
 		case 0: exit(EXIT_FAILURE);
 		default:
 			cout << "Opcion no valida.\n";

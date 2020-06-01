@@ -68,6 +68,8 @@ float obtenerPlasticoUtilizado(ListaFigura& lista);
 
 void obtenerPlasticoUtilizadoPorFigura(ListaFigura& listaFigura);
 
+void imprimirDetalleFigura(Figura figura, bool mostrarColor);
+
 //Inserta la figura en la lista de figuras general
 void insertarFiguraEnListaDeFiguras(ListaFigura& listaFigura, Figura figura);
 
