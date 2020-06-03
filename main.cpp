@@ -10,22 +10,33 @@
 #include "ListaColor.h"
 using namespace std;
 
+string nombreArchivo = "";
+
+queue<string> mostrarInicio()
+{
+	queue<string> contenidoArchivo;
+	do
+	{
+		cin.clear();
+
+		cout <<
+			"*************   Industria Plastica   ************" << "\n\n" <<
+			"Ingrese nombre de archivo: ";
+
+		cin >> nombreArchivo;
+		limpiarConsola();
+		contenidoArchivo = leerArchivo(nombreArchivo);
+		if (contenidoArchivo.empty())
+			cout << "\n" << "No se encuentra el archivo o el mismo esta vacio" << "\n" << endl;
+	} while (contenidoArchivo.empty());
+		return contenidoArchivo;
+}
+
 int main()
 {
 	int opcion = 0;
-	string nombreArchivo = "";
-
-	limpiarConsola();
-	cin.clear();
-
-	cout <<
-		"*************   Industria Plastica   ************" << "\n\n" <<
-		"Ingrese nombre de archivo: "
-		<< endl;
-
-	cin >> nombreArchivo;
-	limpiarConsola();
-	queue<string> contenidoArchivo = leerArchivo(nombreArchivo);
+	
+	queue<string> contenidoArchivo = mostrarInicio();
 	ListaFigura listaFigura = insertarFigurasEnListaDeFiguras(contenidoArchivo);
 	ListaColor listaColor = insertarFigurasEnListaDeColor(contenidoArchivo);
 	
@@ -39,39 +50,49 @@ int main()
 			"2:Cantidad de Plastico Utilizado" << "\n" <<
 			"3:Cantidad de Plastico Utilizado por Figura" << "\n" <<
 			"4:Mostrar Total por Figura - Color" << "\n" <<
-			"5:Orden de Produccion de Figuras" << "\n" <<
+			"5:Orden de Produccion de Figuras por Color" << "\n" <<
 			"6:Orden de Figuras Segun sus Areas" << "\n" <<
 			"0:Salir" << "\n\n" <<
-			"Ingrese una opcion: "
-			<< endl;
+			"Ingrese una opcion: ";
 
 		cin >> opcion;
 
 		switch (opcion)
 		{
 		case 1:
-			recorrerLista(listaFigura);
-			//cout << "Perimetro = " << perimetro(radio) << endl;
-			//pauseConsole();
+			cout << "\n" << "Listado de Figuras" << "\n" << endl;
+			imprimirLista(listaFigura);
+			pausarConsola();
+			limpiarConsola();
 			break;
 		case 2:
-			//cout << "Diametro = " << diametro(radio) << endl;
-			//pauseConsole();
+			cout << "\n" << "Plastico Utilizado" << "\n" << endl;
+			cout << "\n" << "El total de plastico utilizado en el lote es de " << obtenerPlasticoUtilizado(listaFigura) << " cm." << "\n" << endl;
+			pausarConsola();
+			limpiarConsola();
 			break;
 		case 3:
-			//cout << "Area = " << area(radio) << endl;
-			//pauseConsole();
+			cout << "\n" << "Plastico Utilizado por Figura" << "\n" << endl;
+			obtenerPlasticoUtilizadoPorFigura(listaFigura);
+			pausarConsola();
+			limpiarConsola();
 			break;
 		case 4:
-			//cleanConsoleMain();
-			//cout << "Ingrese angulo: " << endl;
-			//cin >> angulo;
-			//cout << "Longitud del arco = " << longitudDelArco(radio, angulo) << endl;
-			//pauseConsole();
+			cout << "\n" << "Plastico Utilizado por Figura - Color" << "\n" << endl;
+			obtenerPlasticoUtilizadoPorFiguraColor(listaColor);
+			pausarConsola();
+			limpiarConsola();
 			break;
+		case 5:
+			cout << "\n" << "Orden de Produccion de Figuras por Color" << "\n" << endl;
+			imprimirListaColor(listaColor);
+			pausarConsola();
+			limpiarConsola();
+		case 6:
+			pausarConsola();
+			limpiarConsola();
 		case 0: exit(EXIT_FAILURE);
 		default:
-			//cleanConsoleMain();
 			cout << "Opcion no valida.\n";
 			break;
 		}

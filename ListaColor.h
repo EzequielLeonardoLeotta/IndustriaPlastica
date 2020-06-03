@@ -31,5 +31,6 @@ PtrNodoListaColor adicionarDespues(ListaColor& lista, Color color, PtrNodoListaC
 PtrNodoListaColor adicionarFinal(ListaColor& lista, Color color);
 void imprimirListaColor(ListaColor lst);
 void insertarFiguraEnListaDeColor(ListaColor& listaColor, Figura figura);
+void obtenerPlasticoUtilizadoPorFiguraColor(ListaColor listaColor);
 
 #endif
