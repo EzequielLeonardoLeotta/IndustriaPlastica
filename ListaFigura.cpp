@@ -145,41 +145,32 @@ void imprimirLista(ListaFigura& lista)
 	PtrNodoListaFigura cursor;
 	cursor = primero(lista);
 	Figura auxFigura;
-	string tipoFigura = "";
-	int tipo = 0;
 
 	while (cursor != finLista()) {
 		obtenerDato(lista, auxFigura, cursor);
 
-		tipo = (int)auxFigura.tipoFigura;
-
-		switch (tipo)
+		switch (getTipoFigura(auxFigura))
 		{
-			case 0: 
-				tipoFigura = "circulo";
-				cout << "Tipo: " << tipoFigura << endl;
+		case TipoFigura::Circulo: 
+				cout << "Tipo: circulo"  << endl;
 				cout << "Radio: " << getParametro1(auxFigura) << " cm." << endl;
 				break;
-			case 1:
-				tipoFigura = "cilindro";
-				cout << "Tipo: " << tipoFigura << endl;
+		case TipoFigura::Cilindro:
+				cout << "Tipo: cilindro"  << endl;
 				cout << "Radio: " << getParametro1(auxFigura) << " cm." << endl;
 				cout << "Altura: " << getParametro2(auxFigura) << " cm." << endl;
 				break;
-			case 2:
-				tipoFigura = "cubo";
-				cout << "Tipo: " << tipoFigura << endl;
+		case TipoFigura::Cubo:
+				cout << "Tipo: cubo" << endl;
 				cout << "Lado: " << getParametro1(auxFigura) << " cm." << endl;
 				break;
-			case 3:
-				tipoFigura = "triangulo";
-				cout << "Tipo: " << tipoFigura << endl;
+		case TipoFigura::Triangulo:
+				cout << "Tipo: triangulo "<< endl;
 				cout << "Cateto mayor: " << getParametro1(auxFigura) << " cm." << endl;
 				cout << "Cateto menor: " << getParametro2(auxFigura) << " cm." << endl;
 				break;
-			case 4:
-				tipoFigura = "rectangulo";
-				cout << "Tipo: " << tipoFigura << endl;
+		case TipoFigura::Rectangulo:
+				cout << "Tipo: rectangulo" << endl;
 				cout << "Base: " << getParametro1(auxFigura) << " cm." << endl;
 				cout << "Altura: " << getParametro2(auxFigura) << " cm." << endl;
 				break;
