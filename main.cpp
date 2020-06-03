@@ -10,21 +10,33 @@
 #include "ListaColor.h"
 using namespace std;
 
+string nombreArchivo = "";
+
+queue<string> mostrarInicio()
+{
+	queue<string> contenidoArchivo;
+	do
+	{
+		cin.clear();
+
+		cout <<
+			"*************   Industria Plastica   ************" << "\n\n" <<
+			"Ingrese nombre de archivo: ";
+
+		cin >> nombreArchivo;
+		limpiarConsola();
+		contenidoArchivo = leerArchivo(nombreArchivo);
+		if (contenidoArchivo.empty())
+			cout << "\n" << "No se encuentra el archivo o el mismo esta vacio" << "\n" << endl;
+	} while (contenidoArchivo.empty());
+		return contenidoArchivo;
+}
+
 int main()
 {
 	int opcion = 0;
-	string nombreArchivo = "";
-
-	limpiarConsola();
-	cin.clear();
-
-	cout <<
-		"*************   Industria Plastica   ************" << "\n\n" <<
-		"Ingrese nombre de archivo: ";
-
-	cin >> nombreArchivo;
-	limpiarConsola();
-	queue<string> contenidoArchivo = leerArchivo(nombreArchivo);
+	
+	queue<string> contenidoArchivo = mostrarInicio();
 	ListaFigura listaFigura = insertarFigurasEnListaDeFiguras(contenidoArchivo);
 	ListaColor listaColor = insertarFigurasEnListaDeColor(contenidoArchivo);
 	
