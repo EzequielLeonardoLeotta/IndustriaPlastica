@@ -73,4 +73,8 @@ void imprimirDetalleFigura(Figura figura, bool mostrarColor);
 //Inserta la figura en la lista de figuras general
 void insertarFiguraEnListaDeFiguras(ListaFigura& listaFigura, Figura figura);
 
+void colocarFigura(ListaFigura& lista, Figura& figu, PtrNodoListaFigura ptrNodo);
+
+void obtenerListaOrdenada(ListaFigura& lista);
+
 #endif
