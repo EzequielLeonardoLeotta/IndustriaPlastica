@@ -168,21 +168,21 @@ void obtenerPlasticoUtilizadoPorFiguraColor(ListaColor listaColor)
 			obtenerDato(listaFigura, auxFigura, cursorFigura);
 			tipoFigura = getTipoFigura(auxFigura);
 
-			switch ((int)tipoFigura)
+			switch (getTipoFigura(auxFigura))
 			{
-			case 0:
+			case TipoFigura::Circulo:
 				areaTotalCirculo += getArea(auxFigura);
 				break;
-			case 1:
+			case TipoFigura::Cilindro:
 				areaTotalCilindro += getArea(auxFigura);
 				break;
-			case 2:
+			case TipoFigura::Cubo:
 				areaTotalCubo += getArea(auxFigura);
 				break;
-			case 3:
+			case TipoFigura::Triangulo:
 				areaTotalTriangulo += getArea(auxFigura);
 				break;
-			case 4:
+			case TipoFigura::Rectangulo:
 				areaTotalRectangulo += getArea(auxFigura);
 				break;
 			}

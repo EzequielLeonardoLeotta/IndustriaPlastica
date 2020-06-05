@@ -39,7 +39,6 @@ int main()
 	queue<string> contenidoArchivo = mostrarInicio();
 	ListaFigura listaFigura = insertarFigurasEnListaDeFiguras(contenidoArchivo);
 	ListaColor listaColor = insertarFigurasEnListaDeColor(contenidoArchivo);
-	
 
 	//menu principal
 	do
@@ -88,11 +87,19 @@ int main()
 			imprimirListaColor(listaColor);
 			pausarConsola();
 			limpiarConsola();
+			break;
 		case 6:
+			cout << "\n" << "Orden de Figuras por Area de Mayor a Menor" << "\n" << endl;
+			obtenerListaOrdenada(listaFigura);
 			pausarConsola();
 			limpiarConsola();
-		case 0: exit(EXIT_FAILURE);
+			break;
+		case 0: 
+			eliminarLista(listaFigura);
+			exit(EXIT_FAILURE);
+			break;
 		default:
+			limpiarConsola();
 			cout << "Opcion no valida.\n";
 			break;
 		}

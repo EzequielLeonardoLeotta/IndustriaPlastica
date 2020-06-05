@@ -11,13 +11,13 @@ CompararAreaFigura resultadoComparacion(Figura figura1, Figura figura2)
 	CompararAreaFigura aux;
 
 	if (getArea(figura1) > getArea(figura2)) {
-		aux=MAYORAREA;
+		aux = MAYORAREA;
 	}
 	else if (getArea(figura1) < getArea(figura2)) {
-		aux=MENORAREA;
+		aux = MENORAREA;
 	}
 	else {
-		aux=IGUALAREA;
+		aux = IGUALAREA;
 	}
 	return aux;
 }
@@ -46,7 +46,7 @@ PtrNodoListaFigura primero(ListaFigura& lista)
 PtrNodoListaFigura siguiente(ListaFigura& lista, PtrNodoListaFigura ptrSig)
 {
 	PtrNodoListaFigura aux;
-	if (!listaVacia(lista) && !finLista())
+	if ((!listaVacia(lista)) && (ptrSig != finLista()))
 		aux = ptrSig->sgte;
 	else
 		aux = finLista();
@@ -108,7 +108,7 @@ PtrNodoListaFigura ultimo(ListaFigura& lista)
 
 void obtenerDato(ListaFigura& lista, Figura& figura, PtrNodoListaFigura ptrNodo)
 {
-   if ((!listaVacia(lista)) && (ptrNodo != finLista()))
+	if ((!listaVacia(lista)) && (ptrNodo != finLista()))
 		figura = ptrNodo->figura;
 }
 
@@ -132,12 +132,11 @@ void eliminarNodoListaFigura(ListaFigura& lista, PtrNodoListaFigura ptrNodo)
 	}
 }
 
-void eliminarLista(ListaFigura& lista){
+void eliminarLista(ListaFigura& lista)
 {
 	/* retira uno a uno los nodos de la lista */
 	while (!listaVacia(lista))
 		eliminarNodoListaFigura(lista, primero(lista));
-	}
 }
 
 void imprimirLista(ListaFigura& lista)
@@ -151,29 +150,29 @@ void imprimirLista(ListaFigura& lista)
 
 		switch (getTipoFigura(auxFigura))
 		{
-		case TipoFigura::Circulo: 
-				cout << "Tipo: circulo"  << endl;
-				cout << "Radio: " << getParametro1(auxFigura) << " cm." << endl;
-				break;
+		case TipoFigura::Circulo:
+			cout << "Tipo: circulo" << endl;
+			cout << "Radio: " << getParametro1(auxFigura) << " cm." << endl;
+			break;
 		case TipoFigura::Cilindro:
-				cout << "Tipo: cilindro"  << endl;
-				cout << "Radio: " << getParametro1(auxFigura) << " cm." << endl;
-				cout << "Altura: " << getParametro2(auxFigura) << " cm." << endl;
-				break;
+			cout << "Tipo: cilindro" << endl;
+			cout << "Radio: " << getParametro1(auxFigura) << " cm." << endl;
+			cout << "Altura: " << getParametro2(auxFigura) << " cm." << endl;
+			break;
 		case TipoFigura::Cubo:
-				cout << "Tipo: cubo" << endl;
-				cout << "Lado: " << getParametro1(auxFigura) << " cm." << endl;
-				break;
+			cout << "Tipo: cubo" << endl;
+			cout << "Lado: " << getParametro1(auxFigura) << " cm." << endl;
+			break;
 		case TipoFigura::Triangulo:
-				cout << "Tipo: triangulo "<< endl;
-				cout << "Cateto mayor: " << getParametro1(auxFigura) << " cm." << endl;
-				cout << "Cateto menor: " << getParametro2(auxFigura) << " cm." << endl;
-				break;
+			cout << "Tipo: triangulo " << endl;
+			cout << "Cateto mayor: " << getParametro1(auxFigura) << " cm." << endl;
+			cout << "Cateto menor: " << getParametro2(auxFigura) << " cm." << endl;
+			break;
 		case TipoFigura::Rectangulo:
-				cout << "Tipo: rectangulo" << endl;
-				cout << "Base: " << getParametro1(auxFigura) << " cm." << endl;
-				cout << "Altura: " << getParametro2(auxFigura) << " cm." << endl;
-				break;
+			cout << "Tipo: rectangulo" << endl;
+			cout << "Base: " << getParametro1(auxFigura) << " cm." << endl;
+			cout << "Altura: " << getParametro2(auxFigura) << " cm." << endl;
+			break;
 		}
 
 		cout << "Color: " << getColor(auxFigura) << endl;
@@ -183,14 +182,6 @@ void imprimirLista(ListaFigura& lista)
 		cursor = siguiente(lista, cursor);
 	}
 }
-
-/* VER ACA COMO COMPARAMOS 2 FIGURAS, COMO SABEMOS QUE SON IGUALES LA MISMA FIGURA
-O DISTINTAS?
-PtrNodoListaFigura localizarDato(ListaFigura& lista, Figura figu)
-{
-
-}
-*/
 
 int Longitud(ListaFigura& lista)
 {
@@ -223,7 +214,7 @@ float obtenerPlasticoUtilizado(ListaFigura& lista) {
 	return areaTotal;
 };
 
-void obtenerPlasticoUtilizadoPorFigura(ListaFigura& listaFigura) 
+void obtenerPlasticoUtilizadoPorFigura(ListaFigura& listaFigura)
 {
 	PtrNodoListaFigura cursor;
 	cursor = primero(listaFigura);
@@ -239,21 +230,21 @@ void obtenerPlasticoUtilizadoPorFigura(ListaFigura& listaFigura)
 		obtenerDato(listaFigura, auxFigura, cursor);
 		tipoFigura = getTipoFigura(auxFigura);
 
-		switch ((int)tipoFigura)
+		switch (getTipoFigura(auxFigura))
 		{
-		case 0:
+		case TipoFigura::Circulo:
 			areaTotalCirculo += getArea(auxFigura);
 			break;
-		case 1:
+		case TipoFigura::Cilindro:
 			areaTotalCilindro += getArea(auxFigura);
 			break;
-		case 2:
+		case TipoFigura::Cubo:
 			areaTotalCubo += getArea(auxFigura);
 			break;
-		case 3:
+		case TipoFigura::Triangulo:
 			areaTotalTriangulo += getArea(auxFigura);
 			break;
-		case 4:
+		case TipoFigura::Rectangulo:
 			areaTotalRectangulo += getArea(auxFigura);
 			break;
 		}
@@ -271,27 +262,67 @@ void obtenerPlasticoUtilizadoPorFigura(ListaFigura& listaFigura)
 
 void imprimirDetalleFigura(Figura figura, bool mostrarColor)
 {
-	TipoFigura tipoFigura = getTipoFigura(figura);
-	
-	switch ((int)tipoFigura)
+	switch (getTipoFigura(figura))
 	{
-	case 0:
+	case TipoFigura::Circulo:
 		cout << "Figura: Circulo, Plastico utilizado: " << getArea(figura) << endl;
 		break;
-	case 1:
+	case TipoFigura::Cilindro:
 		cout << "Figura: Cilindro, Plastico utilizado: " << getArea(figura) << endl;
 		break;
-	case 2:
+	case TipoFigura::Cubo:
 		cout << "Figura: Cubo, Plastico utilizado: " << getArea(figura) << endl;
 		break;
-	case 3:
+	case TipoFigura::Triangulo:
 		cout << "Figura: Triangulo, Plastico utilizado: " << getArea(figura) << endl;
 		break;
-	case 4:
+	case TipoFigura::Rectangulo:
 		cout << "Figura: Rectangulo, Plastico utilizado: " << getArea(figura) << endl;
 		break;
 	}
 
-	if(mostrarColor)
+	if (mostrarColor)
 		cout << "Color: " << getColor(figura) << endl;
 }
+
+void obtenerListaOrdenada(ListaFigura& lista)
+{
+	PtrNodoListaFigura cursor;
+	PtrNodoListaFigura cursorsgte;
+	Figura auxi1;
+	Figura auxi2;
+	bool ordenado = false;
+
+	while (ordenado != true) {
+
+		ordenado = true;
+		cursor = primero(lista);
+		cursorsgte = siguiente(lista, cursor);
+
+		while (cursor != finLista())
+		{
+			obtenerDato(lista, auxi1, cursor);
+			obtenerDato(lista, auxi2, cursorsgte);
+			if (getArea(auxi1) < getArea(auxi2))
+			{
+				colocarFigura(lista, auxi1, cursorsgte);
+				colocarFigura(lista, auxi2, cursor);
+				ordenado = false;
+				cursor = primero(lista);
+				cursorsgte = siguiente(lista, cursor);
+			}
+			else
+			{
+				cursor = siguiente(lista, cursor);
+				cursorsgte = siguiente(lista, cursor);
+			}
+		}
+	}
+	imprimirLista(lista);
+}
+
+void colocarFigura(ListaFigura& lista, Figura& figura, PtrNodoListaFigura ptrNodo)
+{
+	if ((!listaVacia(lista)) && (ptrNodo != finLista()))
+		ptrNodo->figura = figura;
+};
