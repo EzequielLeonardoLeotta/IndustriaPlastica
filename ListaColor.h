@@ -170,4 +170,23 @@ void insertarFiguraEnListaDeColor(ListaColor& listaColor, Figura figura);
 
 void obtenerPlasticoUtilizadoPorFiguraColor(ListaColor listaColor);
 
+/*
+    PRE: Lista fue creada con crearListaColor().
+    POST: Elimina el nodo apuntado por ptrNodo. No realiza accion si la lista
+    esta vacia o si ptrNodo apunta a finLista().
+    ATRIBUTOS: ListaColor, PtrNodoListaColor.
+    RETORNO: No aplica.
+*/
+
+void eliminarNodoListaColor(ListaColor& lista, PtrNodoListaColor ptrNodo);
+
+/*
+    PRE: Lista fue creada con crearListaColor().
+    POST: Elimina todos los Nodos de la lista quedando destruida e inhabilitada para su uso.
+    ATRIBUTOS: ListaColor.
+    RETORNO: No aplica.
+*/
+
+void eliminarLista(ListaColor& lista);
+
 #endif

@@ -96,6 +96,7 @@ int main()
 			break;
 		case 0: 
 			eliminarLista(listaFigura);
+			eliminarLista(listaColor);
 			exit(EXIT_FAILURE);
 			break;
 		default:

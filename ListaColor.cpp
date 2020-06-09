@@ -45,6 +45,33 @@ void obtenerDatoLcolor(ListaColor& lista, Color& color, PtrNodoListaColor ptrNod
 		color = ptrNodo->color;
 }
 
+
+void eliminarNodoListaColor(ListaColor& lista, PtrNodoListaColor ptrNodo)
+{
+	PtrNodoListaColor ptrPrevio;
+
+	/* verifica que la lista no esté vacia y que nodo no sea finListaColor*/
+	if ((!listaVacia(lista)) && (ptrNodo != finColor())) {
+
+		if (ptrNodo == primero(lista))
+			lista.primero = siguiente(lista, primero(lista));
+
+		else {
+			ptrPrevio = anterior(lista, ptrNodo);
+			ptrPrevio->sgte = ptrNodo->sgte;
+		}
+
+		delete ptrNodo;
+	}
+}
+
+void eliminarLista(ListaColor& lista)
+{
+	/* retira uno a uno los nodos de la lista */
+	while (!listaVacia(lista))
+		eliminarNodoListaColor(lista, primero(lista));
+}
+
 PtrNodoListaColor anterior(ListaColor& lista, PtrNodoListaColor ptrNodo)
 {
 	PtrNodoListaColor ptrPrevio = finColor();
