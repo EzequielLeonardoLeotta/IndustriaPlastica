@@ -1,6 +1,5 @@
 #include "LecturaDeArchivo.h"
 #include "Areas.h"
-#include "Listas.h"
 #include "Figura.h"
 #include "ListaFigura.h"
 #include <iostream>
