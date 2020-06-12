@@ -85,8 +85,7 @@ ListaColor insertarFigurasEnListaDeColor(queue<string> contenidoArchivo)
 		valores[3] = "";
 		contenidoArchivo.pop(); // elimino el valor
 	}
-	//Esto se usa solo para probar, no está hecho para lista de color
-	//imprimirLista(listaColor); 
+	
 	return listaColor;
 }
 
@@ -146,17 +145,19 @@ void insertarDatosEnVariables()
 float calcularArea(Figura figura)
 {
 	float area = 0;
+	TipoFigura tipoFiguraAux = getTipoFigura(figura);
+	float parametro1Aux = getParametro1(figura);
 
-	if (figura.tipoFigura == TipoFigura::Circulo)
-		area = areaCirculo(figura.parametro1);
-	if (figura.tipoFigura == TipoFigura::Cilindro)
-		area = areaCilindro(figura.parametro1, figura.parametro2);
-	if (figura.tipoFigura == TipoFigura::Cubo)
-		area = areaCubo(figura.parametro1);
-	if (figura.tipoFigura == TipoFigura::Triangulo)
-		area = areaTriangulo(figura.parametro1, figura.parametro2);
-	if (figura.tipoFigura == TipoFigura::Rectangulo)
-		area = areaRectangulo(figura.parametro1, figura.parametro2);
+	if (tipoFiguraAux == TipoFigura::Circulo)
+		area = areaCirculo(parametro1Aux);
+	if (tipoFiguraAux == TipoFigura::Cilindro)
+		area = areaCilindro(parametro1Aux, getParametro2(figura));
+	if (tipoFiguraAux == TipoFigura::Cubo)
+		area = areaCubo(parametro1Aux);
+	if (tipoFiguraAux == TipoFigura::Triangulo)
+		area = areaTriangulo(parametro1Aux, getParametro2(figura));
+	if (tipoFiguraAux == TipoFigura::Rectangulo)
+		area = areaRectangulo(parametro1Aux, getParametro2(figura));
 
 	return area;
 }
