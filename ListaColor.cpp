@@ -54,9 +54,11 @@ void eliminarNodoListaColor(ListaColor& lista, PtrNodoListaColor ptrNodo)
 	if ((!listaVacia(lista)) && (ptrNodo != finColor())) {
 
 		if (ptrNodo == primero(lista))
+		{
 			lista.primero = siguiente(lista, primero(lista));
-
-		else {
+		}
+		else 
+		{
 			ptrPrevio = anterior(lista, ptrNodo);
 			ptrPrevio->sgte = ptrNodo->sgte;
 		}
@@ -164,7 +166,7 @@ void imprimirListaColor(ListaColor listaColor)
 		obtenerDatoLcolor(listaColor, color, cursor);
 		cout << "\n" << "Figuras de Color : " << getDescripcion(color) << "\n" << endl;
 		listaFigura = getListaFigura(color);
-		imprimirLista(listaFigura);
+		imprimirLista(listaFigura, false);
 		cursor = siguiente(listaColor, cursor);
 	}
 }
@@ -214,7 +216,7 @@ void obtenerPlasticoUtilizadoPorFiguraColor(ListaColor listaColor)
 				break;
 			}
 
-			imprimirDetalleFigura(auxFigura, true);
+			imprimirDetalleFigura(auxFigura);
 
 			cursorFigura = siguiente(listaFigura, cursorFigura);
 		}

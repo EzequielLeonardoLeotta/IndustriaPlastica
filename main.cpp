@@ -59,13 +59,13 @@ int main()
 		{
 		case 1:
 			cout << "\n" << "Listado de Figuras" << "\n" << endl;
-			imprimirLista(listaFigura);
+			imprimirLista(listaFigura, false);
 			pausarConsola();
 			limpiarConsola();
 			break;
 		case 2:
 			cout << "\n" << "Plastico Utilizado" << "\n" << endl;
-			cout << "\n" << "El total de plastico utilizado en el lote es de " << obtenerPlasticoUtilizado(listaFigura) << " cm." << "\n" << endl;
+			imprimirLista(listaFigura, true);
 			pausarConsola();
 			limpiarConsola();
 			break;

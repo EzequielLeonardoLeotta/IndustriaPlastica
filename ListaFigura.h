@@ -43,15 +43,6 @@ struct ListaFigura {
 /*----------------------------------------------------------------------------*/
 
 /*
-    PRE: Las figuras deben ser creada con el TDA Figura.
-    POST: Devuelve la comparación del area de las figuras.
-    ATRIBUTOS: Figura1, Figura2.
-    RETORNO: Devuelve la comparación del area de las figuras.
-*/
-
-CompararAreaFigura resultadoComparacion(Figura figura1, Figura figura2);
-
-/*
     PRE: La lista no debe haber sido creada.
     POST: ListaFigura queda creada y preparada para ser usada.
     ATRIBUTOS: ListaFigura.
@@ -168,16 +159,6 @@ void obtenerDato(ListaFigura& lista, Figura& figura, PtrNodoListaFigura ptrNodo)
 
 /*
     PRE: Lista fue creada con crearListaFigura().
-    POST: Si el dato se encuentra en la lista, devuelve el puntero al primer nodo
-    que lo contiene. Si el dato no se encuentra en la lista devuelve finLista().
-    ATRIBUTOS: ListaFigura, Figura.
-    RETORNO: Puntero al nodo localizado o finLista().
-*/
-
-PtrNodoListaFigura localizarDato(ListaFigura& lista, Figura figura);
-
-/*
-    PRE: Lista fue creada con crearListaFigura().
     POST: Elimina el nodo apuntado por ptrNodo. No realiza accion si la lista
     esta vacia o si ptrNodo apunta a finLista().
     ATRIBUTOS: ListaFigura, PtrNodoListaFigura.
@@ -198,20 +179,11 @@ void eliminarLista(ListaFigura& lista);
 /*
     PRE: Lista fue creada con crearListaFigura().
     POST: Imprime la lista de Figura.
-    ATRIBUTOS: ListaFigura.
+    ATRIBUTOS: ListaFigura, mostrarAreaTotal true o false.
     RETORNO: No aplica.
 */
 
-void imprimirLista(ListaFigura& lista);
-
-/*
-    PRE: Lista fue creada con crearListaFigura().
-    POST: Se obtiene la cantidad de plastico utilizado.
-    ATRIBUTOS: ListaFigura.
-    RETORNO: La cantidad en float.
-*/
-
-float obtenerPlasticoUtilizado(ListaFigura& lista);
+void imprimirLista(ListaFigura& lista, bool mostrarAreaTotal);
 
 /*
     PRE: Lista fue creada con crearListaFigura().
@@ -225,11 +197,11 @@ void obtenerPlasticoUtilizadoPorFigura(ListaFigura& listaFigura);
 /*
     PRE: La figura debe ser creada con el TDA Figura. 
     POST: Imprime el detalle de figura. 
-    ATRIBUTOS: Figura, mostrarColor true o false. 
+    ATRIBUTOS: Figura. 
     RETORNO: No aplica.
 */
 
-void imprimirDetalleFigura(Figura figura, bool mostrarColor);
+void imprimirDetalleFigura(Figura figura);
 
 /*
     PRE: Lista fue creada con crearListaFigura().La figura debe ser creada con el TDA Figura. 
