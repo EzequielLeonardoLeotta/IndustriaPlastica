@@ -221,10 +221,15 @@ void obtenerPlasticoUtilizadoPorFiguraColor(ListaColor listaColor)
 			cursorFigura = siguiente(listaFigura, cursorFigura);
 		}
 
+		if(areaTotalCirculo!=0)
 		cout << "\n" << "Plastico Utilizado para Circulo: " << areaTotalCirculo << " cm." << "\n" << endl;
+		if (areaTotalCilindro != 0)
 		cout << "Plastico Utilizado para Cilindro: " << areaTotalCilindro << " cm." << "\n" << endl;
+		if (areaTotalCubo != 0)
 		cout << "Plastico Utilizado para Cubo: " << areaTotalCubo << " cm." << "\n" << endl;
+		if(areaTotalTriangulo!=0)
 		cout << "Plastico Utilizado para Triangulo: " << areaTotalTriangulo << " cm." << "\n" << endl;
+		if(areaTotalRectangulo!=0)
 		cout << "Plastico Utilizado para Rectangulo: " << areaTotalRectangulo << " cm." << "\n" << endl;
 
 		areaTotalCirculo = 0;

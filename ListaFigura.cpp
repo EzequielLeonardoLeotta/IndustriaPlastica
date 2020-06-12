@@ -242,30 +242,44 @@ void obtenerPlasticoUtilizadoPorFigura(ListaFigura& listaFigura)
 
 		cursor = siguiente(listaFigura, cursor);
 	}
-
-	cout << "\n" << "Circulo: " << "\n" << endl;
-	imprimirLista(listaCirculo, false);
-	cout << "\n" << "Plastico Utilizado para Circulo: " << areaTotalCirculo << " cm." << "\n" << endl;
+	if (!listaVacia(listaCirculo)) 
+	{
+		cout << "\n" << "Circulo: " << "\n" << endl;
+		imprimirLista(listaCirculo, false);
+		cout << "\n" << "Plastico Utilizado para Circulo: " << areaTotalCirculo << " cm." << "\n" << endl;
+	}
 	eliminarLista(listaCirculo);
 
-	cout << "\n" << "Cilindro: " << "\n" << endl;
-	imprimirLista(listaCilindro, false);
-	cout << "Plastico Utilizado para Cilindro: " << areaTotalCilindro << " cm." << "\n" << endl;
-	eliminarLista(listaCirculo);
+	if (!listaVacia(listaCilindro))
+	{
+		cout << "\n" << "Cilindro: " << "\n" << endl;
+		imprimirLista(listaCilindro, false);
+		cout << "Plastico Utilizado para Cilindro: " << areaTotalCilindro << " cm." << "\n" << endl;
+	}
+	eliminarLista(listaCilindro);
 
-	cout << "\n" << "Cubo: " << "\n" << endl;
-	imprimirLista(listaCubo, false);
-	cout << "Plastico Utilizado para Cubo: " << areaTotalCubo << " cm." << "\n" << endl;
+	if (!listaVacia(listaCubo))
+	{
+		cout << "\n" << "Cubo: " << "\n" << endl;
+		imprimirLista(listaCubo, false);
+		cout << "Plastico Utilizado para Cubo: " << areaTotalCubo << " cm." << "\n" << endl;
+	}
 	eliminarLista(listaCubo);
 
-	cout << "\n" << "Triangulo: " << "\n" << endl;
-	imprimirLista(listaTriangulo, false);
-	cout << "Plastico Utilizado para Triangulo: " << areaTotalTriangulo << " cm." << "\n" << endl;
+	if (!listaVacia(listaTriangulo))
+	{
+		cout << "\n" << "Triangulo: " << "\n" << endl;
+		imprimirLista(listaTriangulo, false);
+		cout << "Plastico Utilizado para Triangulo: " << areaTotalTriangulo << " cm." << "\n" << endl;
+	}
 	eliminarLista(listaTriangulo);
 
-	cout << "\n" << "Rectangulo: " << "\n" << endl;
-	imprimirLista(listaRectangulo, false);
-	cout << "Plastico Utilizado para Rectangulo: " << areaTotalRectangulo << " cm." << "\n" << endl;
+	if (!listaVacia(listaRectangulo))
+	{
+		cout << "\n" << "Rectangulo: " << "\n" << endl;
+		imprimirLista(listaRectangulo, false);
+		cout << "Plastico Utilizado para Rectangulo: " << areaTotalRectangulo << " cm." << "\n" << endl;
+	}
 	eliminarLista(listaRectangulo);
 };
 
