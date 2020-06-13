@@ -128,12 +128,26 @@ PtrNodoListaColor adicionarDespues(ListaColor& lista, Color color, PtrNodoListaC
 	return ptrNuevoNodo;
 }
 
+int LongitudListaColor(ListaColor& lista)
+{
+	PtrNodoListaColor ptrCursor = primero(lista);
+	int longitud = 0;
+	while (ptrCursor != finColor()) {
+		longitud++;
+		ptrCursor = siguiente(lista, ptrCursor);
+	}
+	return longitud;
+}
+
 void insertarFiguraEnListaDeColor(ListaColor& listaColor, Figura figura)
 {
 	bool existe = false;
 	PtrNodoListaColor cursor;
 	cursor = primero(listaColor);
 	Color color;
+	int longitudLista = LongitudListaColor(listaColor);
+
+	// cout << longitudLista << endl;
 
 	while (cursor != finColor() && !existe) {
 		obtenerDatoLcolor(listaColor, color, cursor);
@@ -146,12 +160,45 @@ void insertarFiguraEnListaDeColor(ListaColor& listaColor, Figura figura)
 			cursor = siguiente(listaColor, cursor);
 	}
 
-	if(!existe)
+	if (!existe && longitudLista < 10)
 	{
 		constructor(color, figura);
 		listaVacia(listaColor) ? adicionarPrimero(listaColor, color) : adicionarFinal(listaColor, color);
 	}
-}
+	else if (longitudLista == 10) {
+
+		cout << "La figura ";
+
+		switch (getTipoFigura(figura))
+		{
+		case Circulo:
+			cout << "de tipo circulo ";
+			cout << "con radio " << getParametro1(figura) << " cm. ";
+			break;
+		case Cilindro:
+			cout << "de tipo cilindro ";
+			cout << "con radio " << getParametro1(figura) << " cm. ";
+			cout << "altura " << getParametro2(figura) << " cm. ";
+			break;
+		case Cubo:
+			cout << "de tipo cubo ";
+			cout << "lado " << getParametro1(figura) << " cm. ";
+			break;
+		case Triangulo:
+			cout << "de tipo triangulo ";
+			cout << "cateto mayor " << getParametro1(figura) << " cm. ";
+			cout << "cateto menor " << getParametro2(figura) << " cm. ";
+			break;
+		case Rectangulo:
+			cout << "de tipo rectangulo ";
+			cout << "base " << getParametro1(figura) << " cm. ";
+			cout << "altura " << getParametro2(figura) << " cm. ";
+			break;
+		}
+
+		cout << "y color " << getColor(figura) << " no sera procesada, se llego al limite de 10 colores en el lote.\n" << endl;
+	}
+};
 
 void imprimirListaColor(ListaColor listaColor)
 {
