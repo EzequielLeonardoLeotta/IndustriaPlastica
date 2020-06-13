@@ -19,9 +19,15 @@ float parametro1 = 0;
 float parametro2 = 0;
 size_t posicionComa = 0;
 size_t posicionPuntoYComa = 0;
+std::vector<std::string> colores{};
 
 void pausarConsola() { system("pause"); }
 void limpiarConsola() { system("cls"); }
+
+bool existeEnArreglo(const std::string& value, const std::vector<string>& array)
+{
+	return std::find(array.begin(), array.end(), value) != array.end();
+}
 
 ListaFigura insertarFigurasEnListaDeFiguras(queue<string> contenidoArchivo)
 {
@@ -38,7 +44,14 @@ ListaFigura insertarFigurasEnListaDeFiguras(queue<string> contenidoArchivo)
 		//construyo la figura, calculo su area y la inserto en la lista segun su color y al final en la lista general
 		constructor(figura, tipoFigura, color, area, parametro1, parametro2);
 		setArea(figura, calcularArea(figura));
-		insertarFiguraEnListaDeFiguras(listaFigura, figura);
+
+		if (!existeEnArreglo(color, colores) && colores.size() < 10) {
+			colores.push_back(color);
+			insertarFiguraEnListaDeFiguras(listaFigura, figura);
+		}
+		else if (existeEnArreglo(color, colores)) {
+			insertarFiguraEnListaDeFiguras(listaFigura, figura);
+		}
 		
 		//vacio el array y pongo el iterador en 0
 		iterador = 0;

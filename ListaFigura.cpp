@@ -168,17 +168,6 @@ void imprimirDetalleFigura(Figura figura)
 	cout << "Plastico utilizado: " << getArea(figura) << " cm." << "\n" << endl;
 }
 
-int Longitud(ListaFigura& lista)
-{
-	PtrNodoListaFigura ptrCursor = primero(lista);
-	int longitud = 0;
-	while (ptrCursor != finLista()) {
-		longitud++;
-		ptrCursor = siguiente(lista, ptrCursor);
-	}
-	return longitud;
-}
-
 void insertarFiguraEnListaDeFiguras(ListaFigura& listaFigura, Figura figura)
 {
 	listaVacia(listaFigura) ? adicionarPrimero(listaFigura, figura) : adicionarFinal(listaFigura, figura);

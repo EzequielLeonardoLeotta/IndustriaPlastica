@@ -29,4 +29,7 @@ void insertarDatosEnVariables();
 //Funcion que switchea el calculo dependiendo de la figura que recibe como parametro
 float calcularArea(Figura figura);
 
+//Funcion que valida si un valor existe en un arreglo
+bool existeEnArreglo(const std::string& value, const std::vector<string>& array);
+
 #endif
