@@ -1,6 +1,4 @@
 #include "Figura.h"
-#include<string>
-using namespace std;
 
 void constructor(Figura& figura, TipoFigura tipoFigura, string color, float area, float parametro1, float parametro2)
 {

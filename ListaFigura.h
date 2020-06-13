@@ -1,8 +1,3 @@
-#include "Figura.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-
 /* TDA ListaFigura
  * Implementación Simplemente Enlazada
  * Archivo : ListaFigura.h
@@ -11,6 +6,10 @@
 
 #ifndef LISTAFIGURA_H_
 #define LISTAFIGURA_H_
+#include "Figura.h"
+#include <string.h>
+#include <iostream>
+using namespace std;
 
 /* tipo enumerado para realizar comparaciones */
 

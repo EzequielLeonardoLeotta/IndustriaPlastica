@@ -1,10 +1,4 @@
 #include "ListaFigura.h"
-#include "Figura.h"
-#include <string.h>
-#include <stdlib.h>
-#include <stdio.h>
-#include <iostream>
-using namespace std;
 
 void crearListaFigura(ListaFigura& lista)
 {
@@ -145,25 +139,25 @@ void imprimirDetalleFigura(Figura figura)
 {
 	switch (getTipoFigura(figura))
 	{
-	case TipoFigura::Circulo:
+	case Circulo:
 		cout << "Tipo: circulo" << endl;
 		cout << "Radio: " << getParametro1(figura) << " cm." << endl;
 		break;
-	case TipoFigura::Cilindro:
+	case Cilindro:
 		cout << "Tipo: cilindro" << endl;
 		cout << "Radio: " << getParametro1(figura) << " cm." << endl;
 		cout << "Altura: " << getParametro2(figura) << " cm." << endl;
 		break;
-	case TipoFigura::Cubo:
+	case Cubo:
 		cout << "Tipo: cubo" << endl;
 		cout << "Lado: " << getParametro1(figura) << " cm." << endl;
 		break;
-	case TipoFigura::Triangulo:
+	case Triangulo:
 		cout << "Tipo: triangulo " << endl;
 		cout << "Cateto mayor: " << getParametro1(figura) << " cm." << endl;
 		cout << "Cateto menor: " << getParametro2(figura) << " cm." << endl;
 		break;
-	case TipoFigura::Rectangulo:
+	case Rectangulo:
 		cout << "Tipo: rectangulo" << endl;
 		cout << "Base: " << getParametro1(figura) << " cm." << endl;
 		cout << "Altura: " << getParametro2(figura) << " cm." << endl;
@@ -218,23 +212,23 @@ void obtenerPlasticoUtilizadoPorFigura(ListaFigura& listaFigura)
 
 		switch (getTipoFigura(auxFigura))
 		{
-		case TipoFigura::Circulo:
+		case Circulo:
 			areaTotalCirculo += getArea(auxFigura);
 			listaVacia(listaCirculo) ? adicionarPrimero(listaCirculo, auxFigura) : adicionarFinal(listaCirculo, auxFigura);
 			break;
-		case TipoFigura::Cilindro:
+		case Cilindro:
 			areaTotalCilindro += getArea(auxFigura);
 			listaVacia(listaCilindro) ? adicionarPrimero(listaCilindro, auxFigura) : adicionarFinal(listaCilindro, auxFigura);
 			break;
-		case TipoFigura::Cubo:
+		case Cubo:
 			areaTotalCubo += getArea(auxFigura);
 			listaVacia(listaCubo) ? adicionarPrimero(listaCubo, auxFigura) : adicionarFinal(listaCubo, auxFigura);
 			break;
-		case TipoFigura::Triangulo:
+		case Triangulo:
 			areaTotalTriangulo += getArea(auxFigura);
 			listaVacia(listaTriangulo) ? adicionarPrimero(listaTriangulo, auxFigura) : adicionarFinal(listaTriangulo, auxFigura);
 			break;
-		case TipoFigura::Rectangulo:
+		case Rectangulo:
 			areaTotalRectangulo += getArea(auxFigura);
 			listaVacia(listaRectangulo) ? adicionarPrimero(listaRectangulo, auxFigura) : adicionarFinal(listaRectangulo, auxFigura);
 			break;

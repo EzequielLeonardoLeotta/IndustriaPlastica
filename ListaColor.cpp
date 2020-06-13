@@ -1,5 +1,4 @@
 ﻿#include "ListaColor.h"
-#include <iostream>
 
 void crearListaColor(ListaColor& lista)
 {
@@ -199,19 +198,19 @@ void obtenerPlasticoUtilizadoPorFiguraColor(ListaColor listaColor)
 
 			switch (getTipoFigura(auxFigura))
 			{
-			case TipoFigura::Circulo:
+			case Circulo:
 				areaTotalCirculo += getArea(auxFigura);
 				break;
-			case TipoFigura::Cilindro:
+			case Cilindro:
 				areaTotalCilindro += getArea(auxFigura);
 				break;
-			case TipoFigura::Cubo:
+			case Cubo:
 				areaTotalCubo += getArea(auxFigura);
 				break;
-			case TipoFigura::Triangulo:
+			case Triangulo:
 				areaTotalTriangulo += getArea(auxFigura);
 				break;
-			case TipoFigura::Rectangulo:
+			case Rectangulo:
 				areaTotalRectangulo += getArea(auxFigura);
 				break;
 			}

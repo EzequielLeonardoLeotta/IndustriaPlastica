@@ -1,6 +1,5 @@
 #ifndef __FIGURA_H__
 #define __FIGURA_H__
-
 #include<string>
 using namespace std;
 
@@ -8,7 +7,7 @@ using namespace std;
 /* Definiciones de Tipos de Datos */
 /*--------------------------------*/
 
-enum class TipoFigura { Circulo, Cilindro, Cubo, Triangulo, Rectangulo };
+enum TipoFigura { Circulo, Cilindro, Cubo, Triangulo, Rectangulo };
 
 typedef struct Figura {
     TipoFigura tipoFigura;

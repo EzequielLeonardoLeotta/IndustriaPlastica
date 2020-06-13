@@ -1,9 +1,4 @@
 #include "Areas.h"
-using namespace std;
-
-//Lib para numero pi
-#define _USE_MATH_DEFINES
-#include <math.h>
 
 float areaCirculo(float radio)
 {

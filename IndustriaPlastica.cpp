@@ -1,13 +1,4 @@
-#include "LecturaDeArchivo.h"
-#include "Areas.h"
-#include "Figura.h"
-#include "ListaFigura.h"
-#include "ListaColor.h"
-#include <iostream>
-#include<string>
-#include <iomanip>
 #include "IndustriaPlastica.h"
-using namespace std;
 
 string linea = "";
 size_t posicion = 0;
@@ -126,15 +117,15 @@ void insertarDatosEnVariables()
 {
 	//primero obtengo el tipo de figura
 	if (valores[0] == "circulo")
-		tipoFigura = TipoFigura::Circulo;
+		tipoFigura = Circulo;
 	if (valores[0] == "cilindro")
-		tipoFigura = TipoFigura::Cilindro;
+		tipoFigura = Cilindro;
 	if (valores[0] == "cubo")
-		tipoFigura = TipoFigura::Cubo;
+		tipoFigura = Cubo;
 	if (valores[0] == "triangulo")
-		tipoFigura = TipoFigura::Triangulo;
+		tipoFigura = Triangulo;
 	if (valores[0] == "rectangulo")
-		tipoFigura = TipoFigura::Rectangulo;
+		tipoFigura = Rectangulo;
 
 	//convierto los atributos restantes a su tipo correspondiente
 	color = valores[1];
@@ -148,15 +139,15 @@ float calcularArea(Figura figura)
 	TipoFigura tipoFiguraAux = getTipoFigura(figura);
 	float parametro1Aux = getParametro1(figura);
 
-	if (tipoFiguraAux == TipoFigura::Circulo)
+	if (tipoFiguraAux == Circulo)
 		area = areaCirculo(parametro1Aux);
-	if (tipoFiguraAux == TipoFigura::Cilindro)
+	if (tipoFiguraAux == Cilindro)
 		area = areaCilindro(parametro1Aux, getParametro2(figura));
-	if (tipoFiguraAux == TipoFigura::Cubo)
+	if (tipoFiguraAux == Cubo)
 		area = areaCubo(parametro1Aux);
-	if (tipoFiguraAux == TipoFigura::Triangulo)
+	if (tipoFiguraAux == Triangulo)
 		area = areaTriangulo(parametro1Aux, getParametro2(figura));
-	if (tipoFiguraAux == TipoFigura::Rectangulo)
+	if (tipoFiguraAux == Rectangulo)
 		area = areaRectangulo(parametro1Aux, getParametro2(figura));
 
 	return area;

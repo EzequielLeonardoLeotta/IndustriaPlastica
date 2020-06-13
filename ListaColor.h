@@ -1,9 +1,7 @@
 #ifndef __LISTACOLOR_H__
 #define __LISTACOLOR_H__
-#include "ListaFigura.h"
+#include <iostream>
 #include "Color.h"
-#include <cstring>
-#include <string>
 
 /******************************************************************************/
 /* Definiciones de Tipos de Datos */

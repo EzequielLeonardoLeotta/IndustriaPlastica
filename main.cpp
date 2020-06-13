@@ -1,13 +1,5 @@
 #include "LecturaDeArchivo.h"
-#include "Areas.h"
-#include "Figura.h"
-#include "ListaFigura.h"
-#include <iostream>
-#include<string>
-#include <iomanip>
 #include "IndustriaPlastica.h"
-#include "ListaColor.h"
-using namespace std;
 
 string nombreArchivo = "";
 
