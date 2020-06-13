@@ -4,6 +4,7 @@
 #include <queue>
 #include "ListaColor.h"
 #include <stdlib.h>
+#include <algorithm> 
 
 //Pausa la consola
 void pausarConsola();

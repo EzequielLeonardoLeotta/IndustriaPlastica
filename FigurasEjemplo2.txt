@@ -12,3 +12,4 @@ cubo rosa 4
 cilindro bordo 2,5; 3
 rectangulo gris 3; 5
 triangulo dorado 3; 1,5
+circulo rojo 5

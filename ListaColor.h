@@ -28,7 +28,6 @@ struct ListaColor {
     ATRIBUTOS: ListaColor.
     RETORNO: No aplica.
 */
-
 void crearListaColor(ListaColor& lista);
 
 /*
@@ -46,7 +45,6 @@ bool listaVacia(ListaColor& lista);
     ATRIBUTOS: No aplica.
     RETORNO: PtrNodoListaColor. 
 */
-
 PtrNodoListaColor finColor();
 
 /*
@@ -55,7 +53,6 @@ PtrNodoListaColor finColor();
     ATRIBUTOS: ListaColor.
     RETORNO: Puntero al primer nodo.
 */
-
 PtrNodoListaColor primero(ListaColor& lista);
 
 /*
@@ -65,7 +62,6 @@ PtrNodoListaColor primero(ListaColor& lista);
     ATRIBUTOS: ListaColor, ptrNodoListaColor.
     RETORNO: Puntero al nodo siguiente.
 */
-
 PtrNodoListaColor siguiente(ListaColor& lista, PtrNodoListaColor ptrNodo);
 
 /*
@@ -82,7 +78,6 @@ PtrNodoListaColor ultimo(ListaColor& lista);
     ATRIBUTOS: ListaColor, Color.
     RETORNO: Puntero al nodo adicionado.
 */
-
 PtrNodoListaColor adicionarFinal(ListaColor& lista, Color color);
 
 /*
@@ -91,7 +86,6 @@ PtrNodoListaColor adicionarFinal(ListaColor& lista, Color color);
     ATRIBUTOS: ListaColor, Color, PtrNodoListaColor.
     RETORNO: Puntero al nodo del cual se quiere obtener el dato.
 */
-
 void obtenerDatoLcolor(ListaColor& lista, Color& color, PtrNodoListaColor ptrNodo);
 
 /*
@@ -101,7 +95,6 @@ void obtenerDatoLcolor(ListaColor& lista, Color& color, PtrNodoListaColor ptrNod
     ATRIBUTOS: ListaColor, PtrNodoListaColor.
     RETORNO: Puntero al nodo anterior.
 */
-
 PtrNodoListaColor anterior(ListaColor& lista, PtrNodoListaColor ptrNodo);
 
 /*
@@ -118,7 +111,6 @@ PtrNodoListaColor crearNodoListaColor(Color color);
     ATRIBUTOS: ListaColor, Color.
     RETORNO: PtrNodoListaColor.
 */
-
 PtrNodoListaColor adicionarPrimero(ListaColor& lista, Color color);
 
 /*
@@ -131,7 +123,6 @@ PtrNodoListaColor adicionarPrimero(ListaColor& lista, Color color);
     ATRIBUTOS: ListaColor,Color, PtrNodoListaColor.
     RETORNO: Puntero al nodo adicionado.
 */
-
 PtrNodoListaColor adicionarDespues(ListaColor& lista, Color color, PtrNodoListaColor ptrNodo);
 
 /*
@@ -140,7 +131,6 @@ PtrNodoListaColor adicionarDespues(ListaColor& lista, Color color, PtrNodoListaC
     ATRIBUTOS: ListaColor, Color.
     RETORNO: Puntero al nodo adicionado.
 */
-
 PtrNodoListaColor adicionarFinal(ListaColor& lista, Color color);
 
 /*
@@ -165,7 +155,6 @@ void insertarFiguraEnListaDeColor(ListaColor& listaColor, Figura figura);
     ATRIBUTOS: ListaColor.
     RETORNO: No aplica.
 */
-
 void obtenerPlasticoUtilizadoPorFiguraColor(ListaColor listaColor);
 
 /*
@@ -175,7 +164,6 @@ void obtenerPlasticoUtilizadoPorFiguraColor(ListaColor listaColor);
     ATRIBUTOS: ListaColor, PtrNodoListaColor.
     RETORNO: No aplica.
 */
-
 void eliminarNodoListaColor(ListaColor& lista, PtrNodoListaColor ptrNodo);
 
 /*
@@ -184,7 +172,6 @@ void eliminarNodoListaColor(ListaColor& lista, PtrNodoListaColor ptrNodo);
     ATRIBUTOS: ListaColor.
     RETORNO: No aplica.
 */
-
 void eliminarLista(ListaColor& lista);
 
 #endif

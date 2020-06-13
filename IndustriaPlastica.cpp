@@ -19,14 +19,14 @@ float parametro1 = 0;
 float parametro2 = 0;
 size_t posicionComa = 0;
 size_t posicionPuntoYComa = 0;
-std::vector<std::string> colores{};
+vector<string> colores{};
 
 void pausarConsola() { system("pause"); }
 void limpiarConsola() { system("cls"); }
 
-bool existeEnArreglo(const std::string& value, const std::vector<string>& array)
+bool existeEnArreglo(const string& value, const vector<string>& array)
 {
-	return std::find(array.begin(), array.end(), value) != array.end();
+	return find(array.begin(), array.end(), value) != array.end();
 }
 
 ListaFigura insertarFigurasEnListaDeFiguras(queue<string> contenidoArchivo)

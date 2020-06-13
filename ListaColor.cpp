@@ -165,7 +165,7 @@ void insertarFiguraEnListaDeColor(ListaColor& listaColor, Figura figura)
 		constructor(color, figura);
 		listaVacia(listaColor) ? adicionarPrimero(listaColor, color) : adicionarFinal(listaColor, color);
 	}
-	else if (longitudLista == 10) {
+	else if (!existe && longitudLista == 10) {
 
 		cout << "La figura ";
 

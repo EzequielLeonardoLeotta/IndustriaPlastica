@@ -39,7 +39,6 @@ struct ListaFigura {
     ATRIBUTOS: ListaFigura.
     RETORNO: No aplica.
 */
-
 void crearListaFigura(ListaFigura& lista);
 
 /*
@@ -48,7 +47,6 @@ void crearListaFigura(ListaFigura& lista);
     ATRIBUTOS: ListaFigura.
     RETORNO: true o false.
 */
-
 bool listaVacia(ListaFigura& lista);
 
 /*
@@ -58,7 +56,6 @@ bool listaVacia(ListaFigura& lista);
     ATRIBUTOS: No aplica.
     RETORNO: PtrNodoListaFigura.
 */
-
 PtrNodoListaFigura finLista();
 
 /*
@@ -67,7 +64,6 @@ PtrNodoListaFigura finLista();
     ATRIBUTOS: ListaFigura.
     RETORNO: Puntero al primer nodo.
 */
-
 PtrNodoListaFigura primero(ListaFigura& lista);
 
 /*
@@ -77,7 +73,6 @@ PtrNodoListaFigura primero(ListaFigura& lista);
     ATRIBUTOS: ListaFigura, ptrNodoListaFigura.
     RETORNO: Puntero al nodo siguiente.
 */
-
 PtrNodoListaFigura siguiente(ListaFigura& lista, PtrNodoListaFigura ptrSig);
 
 /*
@@ -86,7 +81,6 @@ PtrNodoListaFigura siguiente(ListaFigura& lista, PtrNodoListaFigura ptrSig);
     ATRIBUTOS: Figura.
     RETORNO: PtrNodoListaFigura.
 */
-
 PtrNodoListaFigura crearNodo(Figura figura);
 
 /*
@@ -99,7 +93,6 @@ PtrNodoListaFigura crearNodo(Figura figura);
     ATRIBUTOS: ListaFigura,Figura, PtrNodoListaFigura.
     RETORNO: Puntero al nodo adicionado.
 */
-
 PtrNodoListaFigura adicionarDespues(ListaFigura& lista, Figura figura, PtrNodoListaFigura ptr);
 
 /*
@@ -108,7 +101,6 @@ PtrNodoListaFigura adicionarDespues(ListaFigura& lista, Figura figura, PtrNodoLi
     ATRIBUTOS: ListaFigura, Figura.
     RETORNO: Puntero al nodo adicionado.
 */
-
 PtrNodoListaFigura adicionarFinal(ListaFigura lista, Figura figura);
 
 /*
@@ -117,7 +109,6 @@ PtrNodoListaFigura adicionarFinal(ListaFigura lista, Figura figura);
     ATRIBUTOS: ListaFigura, Figura.
     RETORNO: PtrNodoListaFigura.
 */
-
 PtrNodoListaFigura adicionarPrimero(ListaFigura& lista, Figura figura);
 
 /*
@@ -127,7 +118,6 @@ PtrNodoListaFigura adicionarPrimero(ListaFigura& lista, Figura figura);
     ATRIBUTOS: ListaFigura, PtrNodoListaFigura.
     RETORNO: Puntero al nodo anterior.
 */
-
 PtrNodoListaFigura anterior(ListaFigura& lista, PtrNodoListaFigura ptroNodo);
 
 /*
@@ -136,7 +126,6 @@ PtrNodoListaFigura anterior(ListaFigura& lista, PtrNodoListaFigura ptroNodo);
     ATRIBUTOS: ListaFigura.
     RETORNO: Puntero al ultimo nodo. 
 */
-
 PtrNodoListaFigura ultimo(ListaFigura& lista);
 
 /*
@@ -145,7 +134,6 @@ PtrNodoListaFigura ultimo(ListaFigura& lista);
     ATRIBUTOS: ListaFigura, Figura, PtrNodoListaFigura.
     RETORNO: Puntero al nodo del cual se quiere obtener el dato.
 */
-
 void obtenerDato(ListaFigura& lista, Figura& figura, PtrNodoListaFigura ptrNodo);
 
 /*
@@ -155,7 +143,6 @@ void obtenerDato(ListaFigura& lista, Figura& figura, PtrNodoListaFigura ptrNodo)
     ATRIBUTOS: ListaFigura, PtrNodoListaFigura.
     RETORNO: No aplica.
 */
-
 void eliminarNodoListaFigura(ListaFigura& lista, PtrNodoListaFigura ptrNodo);
 
 /*
@@ -164,7 +151,6 @@ void eliminarNodoListaFigura(ListaFigura& lista, PtrNodoListaFigura ptrNodo);
     ATRIBUTOS: ListaFigura.
     RETORNO: No aplica.  
 */
-
 void eliminarLista(ListaFigura& lista);
 
 /*
@@ -173,7 +159,6 @@ void eliminarLista(ListaFigura& lista);
     ATRIBUTOS: ListaFigura, mostrarAreaTotal true o false.
     RETORNO: No aplica.
 */
-
 void imprimirLista(ListaFigura& lista, bool mostrarAreaTotal);
 
 /*
@@ -182,7 +167,6 @@ void imprimirLista(ListaFigura& lista, bool mostrarAreaTotal);
     ATRIBUTOS: ListaFigura.
     RETORNO: No aplica.
 */
-
 void obtenerPlasticoUtilizadoPorFigura(ListaFigura& listaFigura);
 
 /*
@@ -191,7 +175,6 @@ void obtenerPlasticoUtilizadoPorFigura(ListaFigura& listaFigura);
     ATRIBUTOS: Figura. 
     RETORNO: No aplica.
 */
-
 void imprimirDetalleFigura(Figura figura);
 
 /*
@@ -200,7 +183,6 @@ void imprimirDetalleFigura(Figura figura);
     ATRIBUTOS: ListaFigura,Figura. 
     RETORNO: No aplica.
 */
-
 void insertarFiguraEnListaDeFiguras(ListaFigura& listaFigura, Figura figura);
 
 /*
@@ -209,7 +191,6 @@ void insertarFiguraEnListaDeFiguras(ListaFigura& listaFigura, Figura figura);
     ATRIBUTOS: ListaFigura,Figura, PtrNodoListaFigura.
     RETORNO: No aplica.
 */
-
 void colocarFigura(ListaFigura& lista, Figura& figu, PtrNodoListaFigura ptrNodo);
 
 /*
@@ -218,7 +199,6 @@ void colocarFigura(ListaFigura& lista, Figura& figu, PtrNodoListaFigura ptrNodo)
     ATRIBUTOS: ListaFigura.
     RETORNO: No aplica.
 */
-
 void obtenerListaOrdenada(ListaFigura& lista);
 
 #endif
