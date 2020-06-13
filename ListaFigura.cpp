@@ -1,27 +1,4 @@
 #include "ListaFigura.h"
-#include "Figura.h"
-#include <string.h>
-#include <stdlib.h>
-#include <stdio.h>
-#include <iostream>
-using namespace std;
-
-CompararAreaFigura resultadoComparacion(Figura figura1, Figura figura2)
-{
-	CompararAreaFigura aux;
-
-	if (getArea(figura1) > getArea(figura2)) {
-		aux = MAYORAREA;
-	}
-	else if (getArea(figura1) < getArea(figura2)) {
-		aux = MENORAREA;
-	}
-	else {
-		aux = IGUALAREA;
-	}
-	return aux;
-}
-
 
 void crearListaFigura(ListaFigura& lista)
 {
@@ -120,13 +97,14 @@ void eliminarNodoListaFigura(ListaFigura& lista, PtrNodoListaFigura ptrNodo)
 	if ((!listaVacia(lista)) && (ptrNodo != finLista())) {
 
 		if (ptrNodo == primero(lista))
+		{
 			lista.primero = siguiente(lista, primero(lista));
-
-		else {
+		}
+		else 
+		{
 			ptrPrevio = anterior(lista, ptrNodo);
 			ptrPrevio->sgte = ptrNodo->sgte;
 		}
-		// Si el dato es un TDA, acá habría que llamar al destructor.
 
 		delete ptrNodo;
 	}
@@ -139,47 +117,55 @@ void eliminarLista(ListaFigura& lista)
 		eliminarNodoListaFigura(lista, primero(lista));
 }
 
-void imprimirLista(ListaFigura& lista)
+void imprimirLista(ListaFigura& lista, bool mostrarAreaTotal)
 {
 	PtrNodoListaFigura cursor;
 	cursor = primero(lista);
 	Figura auxFigura;
+	float areaTotal = 0;
 
 	while (cursor != finLista()) {
 		obtenerDato(lista, auxFigura, cursor);
-
-		switch (getTipoFigura(auxFigura))
-		{
-		case TipoFigura::Circulo:
-			cout << "Tipo: circulo" << endl;
-			cout << "Radio: " << getParametro1(auxFigura) << " cm." << endl;
-			break;
-		case TipoFigura::Cilindro:
-			cout << "Tipo: cilindro" << endl;
-			cout << "Radio: " << getParametro1(auxFigura) << " cm." << endl;
-			cout << "Altura: " << getParametro2(auxFigura) << " cm." << endl;
-			break;
-		case TipoFigura::Cubo:
-			cout << "Tipo: cubo" << endl;
-			cout << "Lado: " << getParametro1(auxFigura) << " cm." << endl;
-			break;
-		case TipoFigura::Triangulo:
-			cout << "Tipo: triangulo " << endl;
-			cout << "Cateto mayor: " << getParametro1(auxFigura) << " cm." << endl;
-			cout << "Cateto menor: " << getParametro2(auxFigura) << " cm." << endl;
-			break;
-		case TipoFigura::Rectangulo:
-			cout << "Tipo: rectangulo" << endl;
-			cout << "Base: " << getParametro1(auxFigura) << " cm." << endl;
-			cout << "Altura: " << getParametro2(auxFigura) << " cm." << endl;
-			break;
-		}
-
-		cout << "Color: " << getColor(auxFigura) << endl;
-		cout << "Plastico utilizado: " << getArea(auxFigura) << " cm." << "\n" << endl;
+		areaTotal += getArea(auxFigura);
+		imprimirDetalleFigura(auxFigura);
 
 		cursor = siguiente(lista, cursor);
 	}
+	if (mostrarAreaTotal)
+		cout << "\n" << "El total de plastico utilizado en el lote es de " << areaTotal << " cm." << "\n" << endl;
+}
+
+void imprimirDetalleFigura(Figura figura)
+{
+	switch (getTipoFigura(figura))
+	{
+	case Circulo:
+		cout << "Tipo: circulo" << endl;
+		cout << "Radio: " << getParametro1(figura) << " cm." << endl;
+		break;
+	case Cilindro:
+		cout << "Tipo: cilindro" << endl;
+		cout << "Radio: " << getParametro1(figura) << " cm." << endl;
+		cout << "Altura: " << getParametro2(figura) << " cm." << endl;
+		break;
+	case Cubo:
+		cout << "Tipo: cubo" << endl;
+		cout << "Lado: " << getParametro1(figura) << " cm." << endl;
+		break;
+	case Triangulo:
+		cout << "Tipo: triangulo " << endl;
+		cout << "Cateto mayor: " << getParametro1(figura) << " cm." << endl;
+		cout << "Cateto menor: " << getParametro2(figura) << " cm." << endl;
+		break;
+	case Rectangulo:
+		cout << "Tipo: rectangulo" << endl;
+		cout << "Base: " << getParametro1(figura) << " cm." << endl;
+		cout << "Altura: " << getParametro2(figura) << " cm." << endl;
+		break;
+	}
+
+	cout << "Color: " << getColor(figura) << endl;
+	cout << "Plastico utilizado: " << getArea(figura) << " cm." << "\n" << endl;
 }
 
 int Longitud(ListaFigura& lista)
@@ -197,21 +183,6 @@ void insertarFiguraEnListaDeFiguras(ListaFigura& listaFigura, Figura figura)
 {
 	listaVacia(listaFigura) ? adicionarPrimero(listaFigura, figura) : adicionarFinal(listaFigura, figura);
 }
-
-float obtenerPlasticoUtilizado(ListaFigura& lista) {
-	PtrNodoListaFigura cursor;
-	cursor = primero(lista);
-	Figura auxFigura;
-	float areaTotal = 0;
-
-	while (cursor != finLista()) {
-		obtenerDato(lista, auxFigura, cursor);
-		areaTotal += getArea(auxFigura);
-		imprimirDetalleFigura(auxFigura, false);
-		cursor = siguiente(lista, cursor);
-	}
-	return areaTotal;
-};
 
 void obtenerPlasticoUtilizadoPorFigura(ListaFigura& listaFigura)
 {
@@ -241,23 +212,23 @@ void obtenerPlasticoUtilizadoPorFigura(ListaFigura& listaFigura)
 
 		switch (getTipoFigura(auxFigura))
 		{
-		case TipoFigura::Circulo:
+		case Circulo:
 			areaTotalCirculo += getArea(auxFigura);
 			listaVacia(listaCirculo) ? adicionarPrimero(listaCirculo, auxFigura) : adicionarFinal(listaCirculo, auxFigura);
 			break;
-		case TipoFigura::Cilindro:
+		case Cilindro:
 			areaTotalCilindro += getArea(auxFigura);
 			listaVacia(listaCilindro) ? adicionarPrimero(listaCilindro, auxFigura) : adicionarFinal(listaCilindro, auxFigura);
 			break;
-		case TipoFigura::Cubo:
+		case Cubo:
 			areaTotalCubo += getArea(auxFigura);
 			listaVacia(listaCubo) ? adicionarPrimero(listaCubo, auxFigura) : adicionarFinal(listaCubo, auxFigura);
 			break;
-		case TipoFigura::Triangulo:
+		case Triangulo:
 			areaTotalTriangulo += getArea(auxFigura);
 			listaVacia(listaTriangulo) ? adicionarPrimero(listaTriangulo, auxFigura) : adicionarFinal(listaTriangulo, auxFigura);
 			break;
-		case TipoFigura::Rectangulo:
+		case Rectangulo:
 			areaTotalRectangulo += getArea(auxFigura);
 			listaVacia(listaRectangulo) ? adicionarPrimero(listaRectangulo, auxFigura) : adicionarFinal(listaRectangulo, auxFigura);
 			break;
@@ -265,57 +236,46 @@ void obtenerPlasticoUtilizadoPorFigura(ListaFigura& listaFigura)
 
 		cursor = siguiente(listaFigura, cursor);
 	}
-
-	cout << "\n" << "Circulo: " << "\n" << endl;
-	imprimirLista(listaCirculo);
-	cout << "\n" << "Plastico Utilizado para Circulo: " << areaTotalCirculo << " cm." << "\n" << endl;
+	if (!listaVacia(listaCirculo)) 
+	{
+		cout << "\n" << "Circulo: " << "\n" << endl;
+		imprimirLista(listaCirculo, false);
+		cout << "\n" << "Plastico Utilizado para Circulo: " << areaTotalCirculo << " cm." << "\n" << endl;
+	}
 	eliminarLista(listaCirculo);
 
-	cout << "\n" << "Cilindro: " << "\n" << endl;
-	imprimirLista(listaCilindro);
-	cout << "Plastico Utilizado para Cilindro: " << areaTotalCilindro << " cm." << "\n" << endl;
-	eliminarLista(listaCirculo);
+	if (!listaVacia(listaCilindro))
+	{
+		cout << "\n" << "Cilindro: " << "\n" << endl;
+		imprimirLista(listaCilindro, false);
+		cout << "Plastico Utilizado para Cilindro: " << areaTotalCilindro << " cm." << "\n" << endl;
+	}
+	eliminarLista(listaCilindro);
 
-	cout << "\n" << "Cubo: " << "\n" << endl;
-	imprimirLista(listaCubo);
-	cout << "Plastico Utilizado para Cubo: " << areaTotalCubo << " cm." << "\n" << endl;
+	if (!listaVacia(listaCubo))
+	{
+		cout << "\n" << "Cubo: " << "\n" << endl;
+		imprimirLista(listaCubo, false);
+		cout << "Plastico Utilizado para Cubo: " << areaTotalCubo << " cm." << "\n" << endl;
+	}
 	eliminarLista(listaCubo);
 
-	cout << "\n" << "Triangulo: " << "\n" << endl;
-	imprimirLista(listaTriangulo);
-	cout << "Plastico Utilizado para Triangulo: " << areaTotalTriangulo << " cm." << "\n" << endl;
+	if (!listaVacia(listaTriangulo))
+	{
+		cout << "\n" << "Triangulo: " << "\n" << endl;
+		imprimirLista(listaTriangulo, false);
+		cout << "Plastico Utilizado para Triangulo: " << areaTotalTriangulo << " cm." << "\n" << endl;
+	}
 	eliminarLista(listaTriangulo);
 
-	cout << "\n" << "Rectangulo: " << "\n" << endl;
-	imprimirLista(listaRectangulo);
-	cout << "Plastico Utilizado para Rectangulo: " << areaTotalRectangulo << " cm." << "\n" << endl;
+	if (!listaVacia(listaRectangulo))
+	{
+		cout << "\n" << "Rectangulo: " << "\n" << endl;
+		imprimirLista(listaRectangulo, false);
+		cout << "Plastico Utilizado para Rectangulo: " << areaTotalRectangulo << " cm." << "\n" << endl;
+	}
 	eliminarLista(listaRectangulo);
 };
-
-void imprimirDetalleFigura(Figura figura, bool mostrarColor)
-{
-	switch (getTipoFigura(figura))
-	{
-	case TipoFigura::Circulo:
-		cout << "Figura: Circulo, Plastico utilizado: " << getArea(figura) << endl;
-		break;
-	case TipoFigura::Cilindro:
-		cout << "Figura: Cilindro, Plastico utilizado: " << getArea(figura) << endl;
-		break;
-	case TipoFigura::Cubo:
-		cout << "Figura: Cubo, Plastico utilizado: " << getArea(figura) << endl;
-		break;
-	case TipoFigura::Triangulo:
-		cout << "Figura: Triangulo, Plastico utilizado: " << getArea(figura) << endl;
-		break;
-	case TipoFigura::Rectangulo:
-		cout << "Figura: Rectangulo, Plastico utilizado: " << getArea(figura) << endl;
-		break;
-	}
-
-	if (mostrarColor)
-		cout << "Color: " << getColor(figura) << endl;
-}
 
 void obtenerListaOrdenada(ListaFigura& lista)
 {
@@ -350,7 +310,7 @@ void obtenerListaOrdenada(ListaFigura& lista)
 			}
 		}
 	}
-	imprimirLista(lista);
+	imprimirLista(lista, false);
 }
 
 void colocarFigura(ListaFigura& lista, Figura& figura, PtrNodoListaFigura ptrNodo)

@@ -1,8 +1,9 @@
-#include <stdio.h>
-#include <stdlib.h>
-
 #ifndef __AREAS_H__
 #define __AREAS_H__
+
+//Lib para numero pi
+#define _USE_MATH_DEFINES
+#include <math.h>
 
 //Calculos segun la figura
 

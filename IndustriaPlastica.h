@@ -1,14 +1,9 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <queue>
-#include <string>
-#include "Figura.h"
-#include "ListaColor.h"
-#include "ListaFigura.h"
-using namespace std;
-
 #ifndef __IndustriaPlastica_H__
 #define __IndustriaPlastica_H__
+#include "Areas.h"
+#include <queue>
+#include "ListaColor.h"
+#include <stdlib.h>
 
 //Pausa la consola
 void pausarConsola();

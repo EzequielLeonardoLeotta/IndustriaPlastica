@@ -24,9 +24,6 @@
     <ClCompile Include="LecturaDeArchivo.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="Listas.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
     <ClCompile Include="ListaFigura.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
@@ -51,9 +48,6 @@
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
     <ClInclude Include="LecturaDeArchivo.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="Listas.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
     <ClInclude Include="Figura.h">

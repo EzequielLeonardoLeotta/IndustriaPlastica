@@ -1,14 +1,5 @@
 #include "LecturaDeArchivo.h"
-#include "Areas.h"
-#include "Listas.h"
-#include "Figura.h"
-#include "ListaFigura.h"
-#include <iostream>
-#include<string>
-#include <iomanip>
 #include "IndustriaPlastica.h"
-#include "ListaColor.h"
-using namespace std;
 
 string nombreArchivo = "";
 
@@ -60,13 +51,13 @@ int main()
 		{
 		case 1:
 			cout << "\n" << "Listado de Figuras" << "\n" << endl;
-			imprimirLista(listaFigura);
+			imprimirLista(listaFigura, false);
 			pausarConsola();
 			limpiarConsola();
 			break;
 		case 2:
 			cout << "\n" << "Plastico Utilizado" << "\n" << endl;
-			cout << "\n" << "El total de plastico utilizado en el lote es de " << obtenerPlasticoUtilizado(listaFigura) << " cm." << "\n" << endl;
+			imprimirLista(listaFigura, true);
 			pausarConsola();
 			limpiarConsola();
 			break;
@@ -96,6 +87,7 @@ int main()
 			break;
 		case 0: 
 			eliminarLista(listaFigura);
+			eliminarLista(listaColor);
 			exit(EXIT_FAILURE);
 			break;
 		default:

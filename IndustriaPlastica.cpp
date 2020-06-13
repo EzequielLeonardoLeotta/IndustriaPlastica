@@ -1,13 +1,4 @@
-#include "LecturaDeArchivo.h"
-#include "Areas.h"
-#include "Figura.h"
-#include "ListaFigura.h"
-#include "ListaColor.h"
-#include <iostream>
-#include<string>
-#include <iomanip>
 #include "IndustriaPlastica.h"
-using namespace std;
 
 string linea = "";
 size_t posicion = 0;
@@ -85,8 +76,7 @@ ListaColor insertarFigurasEnListaDeColor(queue<string> contenidoArchivo)
 		valores[3] = "";
 		contenidoArchivo.pop(); // elimino el valor
 	}
-	//Esto se usa solo para probar, no está hecho para lista de color
-	//imprimirLista(listaColor); 
+	
 	return listaColor;
 }
 
@@ -127,15 +117,15 @@ void insertarDatosEnVariables()
 {
 	//primero obtengo el tipo de figura
 	if (valores[0] == "circulo")
-		tipoFigura = TipoFigura::Circulo;
+		tipoFigura = Circulo;
 	if (valores[0] == "cilindro")
-		tipoFigura = TipoFigura::Cilindro;
+		tipoFigura = Cilindro;
 	if (valores[0] == "cubo")
-		tipoFigura = TipoFigura::Cubo;
+		tipoFigura = Cubo;
 	if (valores[0] == "triangulo")
-		tipoFigura = TipoFigura::Triangulo;
+		tipoFigura = Triangulo;
 	if (valores[0] == "rectangulo")
-		tipoFigura = TipoFigura::Rectangulo;
+		tipoFigura = Rectangulo;
 
 	//convierto los atributos restantes a su tipo correspondiente
 	color = valores[1];
@@ -146,17 +136,19 @@ void insertarDatosEnVariables()
 float calcularArea(Figura figura)
 {
 	float area = 0;
+	TipoFigura tipoFiguraAux = getTipoFigura(figura);
+	float parametro1Aux = getParametro1(figura);
 
-	if (figura.tipoFigura == TipoFigura::Circulo)
-		area = areaCirculo(figura.parametro1);
-	if (figura.tipoFigura == TipoFigura::Cilindro)
-		area = areaCilindro(figura.parametro1, figura.parametro2);
-	if (figura.tipoFigura == TipoFigura::Cubo)
-		area = areaCubo(figura.parametro1);
-	if (figura.tipoFigura == TipoFigura::Triangulo)
-		area = areaTriangulo(figura.parametro1, figura.parametro2);
-	if (figura.tipoFigura == TipoFigura::Rectangulo)
-		area = areaRectangulo(figura.parametro1, figura.parametro2);
+	if (tipoFiguraAux == Circulo)
+		area = areaCirculo(parametro1Aux);
+	if (tipoFiguraAux == Cilindro)
+		area = areaCilindro(parametro1Aux, getParametro2(figura));
+	if (tipoFiguraAux == Cubo)
+		area = areaCubo(parametro1Aux);
+	if (tipoFiguraAux == Triangulo)
+		area = areaTriangulo(parametro1Aux, getParametro2(figura));
+	if (tipoFiguraAux == Rectangulo)
+		area = areaRectangulo(parametro1Aux, getParametro2(figura));
 
 	return area;
 }

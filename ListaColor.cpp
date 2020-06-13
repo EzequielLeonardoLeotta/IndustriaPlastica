@@ -1,5 +1,4 @@
 ﻿#include "ListaColor.h"
-#include <iostream>
 
 void crearListaColor(ListaColor& lista)
 {
@@ -43,6 +42,35 @@ void obtenerDatoLcolor(ListaColor& lista, Color& color, PtrNodoListaColor ptrNod
 {
 	if ((!listaVacia(lista)) && (ptrNodo != finColor()))
 		color = ptrNodo->color;
+}
+
+
+void eliminarNodoListaColor(ListaColor& lista, PtrNodoListaColor ptrNodo)
+{
+	PtrNodoListaColor ptrPrevio;
+
+	/* verifica que la lista no esté vacia y que nodo no sea finListaColor*/
+	if ((!listaVacia(lista)) && (ptrNodo != finColor())) {
+
+		if (ptrNodo == primero(lista))
+		{
+			lista.primero = siguiente(lista, primero(lista));
+		}
+		else 
+		{
+			ptrPrevio = anterior(lista, ptrNodo);
+			ptrPrevio->sgte = ptrNodo->sgte;
+		}
+
+		delete ptrNodo;
+	}
+}
+
+void eliminarLista(ListaColor& lista)
+{
+	/* retira uno a uno los nodos de la lista */
+	while (!listaVacia(lista))
+		eliminarNodoListaColor(lista, primero(lista));
 }
 
 PtrNodoListaColor anterior(ListaColor& lista, PtrNodoListaColor ptrNodo)
@@ -137,7 +165,7 @@ void imprimirListaColor(ListaColor listaColor)
 		obtenerDatoLcolor(listaColor, color, cursor);
 		cout << "\n" << "Figuras de Color : " << getDescripcion(color) << "\n" << endl;
 		listaFigura = getListaFigura(color);
-		imprimirLista(listaFigura);
+		imprimirLista(listaFigura, false);
 		cursor = siguiente(listaColor, cursor);
 	}
 }
@@ -170,32 +198,37 @@ void obtenerPlasticoUtilizadoPorFiguraColor(ListaColor listaColor)
 
 			switch (getTipoFigura(auxFigura))
 			{
-			case TipoFigura::Circulo:
+			case Circulo:
 				areaTotalCirculo += getArea(auxFigura);
 				break;
-			case TipoFigura::Cilindro:
+			case Cilindro:
 				areaTotalCilindro += getArea(auxFigura);
 				break;
-			case TipoFigura::Cubo:
+			case Cubo:
 				areaTotalCubo += getArea(auxFigura);
 				break;
-			case TipoFigura::Triangulo:
+			case Triangulo:
 				areaTotalTriangulo += getArea(auxFigura);
 				break;
-			case TipoFigura::Rectangulo:
+			case Rectangulo:
 				areaTotalRectangulo += getArea(auxFigura);
 				break;
 			}
 
-			imprimirDetalleFigura(auxFigura, true);
+			imprimirDetalleFigura(auxFigura);
 
 			cursorFigura = siguiente(listaFigura, cursorFigura);
 		}
 
+		if(areaTotalCirculo!=0)
 		cout << "\n" << "Plastico Utilizado para Circulo: " << areaTotalCirculo << " cm." << "\n" << endl;
+		if (areaTotalCilindro != 0)
 		cout << "Plastico Utilizado para Cilindro: " << areaTotalCilindro << " cm." << "\n" << endl;
+		if (areaTotalCubo != 0)
 		cout << "Plastico Utilizado para Cubo: " << areaTotalCubo << " cm." << "\n" << endl;
+		if(areaTotalTriangulo!=0)
 		cout << "Plastico Utilizado para Triangulo: " << areaTotalTriangulo << " cm." << "\n" << endl;
+		if(areaTotalRectangulo!=0)
 		cout << "Plastico Utilizado para Rectangulo: " << areaTotalRectangulo << " cm." << "\n" << endl;
 
 		areaTotalCirculo = 0;
