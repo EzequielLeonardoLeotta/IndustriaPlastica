@@ -160,12 +160,14 @@ void imprimirListaColor(ListaColor listaColor)
 	Color color;
 	ListaFigura listaFigura;
 	crearListaFigura(listaFigura);
+	cout << "---------------------------------------------" << endl;
 
 	while (cursor != finColor()) {
 		obtenerDatoLcolor(listaColor, color, cursor);
 		cout << "\n" << "Figuras de Color : " << getDescripcion(color) << "\n" << endl;
 		listaFigura = getListaFigura(color);
 		imprimirLista(listaFigura, false);
+		cout << "---------------------------------------------" << endl;
 		cursor = siguiente(listaColor, cursor);
 	}
 }
@@ -230,6 +232,7 @@ void obtenerPlasticoUtilizadoPorFiguraColor(ListaColor listaColor)
 		cout << "Plastico Utilizado para Triangulo: " << areaTotalTriangulo << " cm." << "\n" << endl;
 		if(areaTotalRectangulo!=0)
 		cout << "Plastico Utilizado para Rectangulo: " << areaTotalRectangulo << " cm." << "\n" << endl;
+		cout << "---------------------------------------------" << endl;
 
 		areaTotalCirculo = 0;
 		areaTotalCilindro = 0;

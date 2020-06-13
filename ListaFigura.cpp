@@ -238,9 +238,11 @@ void obtenerPlasticoUtilizadoPorFigura(ListaFigura& listaFigura)
 	}
 	if (!listaVacia(listaCirculo)) 
 	{
+		cout << "---------------------------------------------" << endl;
 		cout << "\n" << "Circulo: " << "\n" << endl;
 		imprimirLista(listaCirculo, false);
 		cout << "\n" << "Plastico Utilizado para Circulo: " << areaTotalCirculo << " cm." << "\n" << endl;
+		cout << "---------------------------------------------" << endl;
 	}
 	eliminarLista(listaCirculo);
 
@@ -249,6 +251,7 @@ void obtenerPlasticoUtilizadoPorFigura(ListaFigura& listaFigura)
 		cout << "\n" << "Cilindro: " << "\n" << endl;
 		imprimirLista(listaCilindro, false);
 		cout << "Plastico Utilizado para Cilindro: " << areaTotalCilindro << " cm." << "\n" << endl;
+		cout << "---------------------------------------------" << endl;
 	}
 	eliminarLista(listaCilindro);
 
@@ -257,6 +260,7 @@ void obtenerPlasticoUtilizadoPorFigura(ListaFigura& listaFigura)
 		cout << "\n" << "Cubo: " << "\n" << endl;
 		imprimirLista(listaCubo, false);
 		cout << "Plastico Utilizado para Cubo: " << areaTotalCubo << " cm." << "\n" << endl;
+		cout << "---------------------------------------------" << endl;
 	}
 	eliminarLista(listaCubo);
 
@@ -265,6 +269,7 @@ void obtenerPlasticoUtilizadoPorFigura(ListaFigura& listaFigura)
 		cout << "\n" << "Triangulo: " << "\n" << endl;
 		imprimirLista(listaTriangulo, false);
 		cout << "Plastico Utilizado para Triangulo: " << areaTotalTriangulo << " cm." << "\n" << endl;
+		cout << "---------------------------------------------" << endl;
 	}
 	eliminarLista(listaTriangulo);
 
@@ -273,6 +278,7 @@ void obtenerPlasticoUtilizadoPorFigura(ListaFigura& listaFigura)
 		cout << "\n" << "Rectangulo: " << "\n" << endl;
 		imprimirLista(listaRectangulo, false);
 		cout << "Plastico Utilizado para Rectangulo: " << areaTotalRectangulo << " cm." << "\n" << endl;
+		cout << "---------------------------------------------" << endl;
 	}
 	eliminarLista(listaRectangulo);
 };

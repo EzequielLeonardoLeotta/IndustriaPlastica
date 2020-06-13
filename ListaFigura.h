@@ -11,14 +11,6 @@
 #include <iostream>
 using namespace std;
 
-/* tipo enumerado para realizar comparaciones */
-
-enum CompararAreaFigura {
-    MAYORAREA,
-    IGUALAREA,
-    MENORAREA
-};
-
 /* Tipo de Estructura de los Nodos de la Lista. */
 struct NodoListaFigura {
     Figura figura; // dato almacenado

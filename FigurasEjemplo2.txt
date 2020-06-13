@@ -1,0 +1,14 @@
+circulo rojo 2,5 
+cubo azul 4
+cilindro amarillo 2,5; 3
+rectangulo verde 6; 3
+triangulo celeste 5; 2,5
+circulo naranja 3
+circulo marron 3,2
+rectangulo negro 1,4; 2
+cilindro blanco 3; 4
+circulo violeta 2,5
+cubo rosa 4
+cilindro bordo 2,5; 3
+rectangulo gris 3; 5
+triangulo dorado 3; 1,5
