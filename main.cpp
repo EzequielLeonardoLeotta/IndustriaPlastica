@@ -1,10 +1,9 @@
 #include "LecturaDeArchivo.h"
 #include "IndustriaPlastica.h"
 
-string nombreArchivo = "";
-
 queue<string> mostrarInicio()
 {
+	string nombreArchivo = "";
 	queue<string> contenidoArchivo;
 	do
 	{
